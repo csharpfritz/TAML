@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using Xunit;
 
 namespace TAML.Test.Taml.NET.GivenSimplestTamlDoc
@@ -6,9 +8,13 @@ namespace TAML.Test.Taml.NET.GivenSimplestTamlDoc
 	public class WhenParsingTheDoc
 	{
 
-		public WhenParsingTheDoc()
+    private readonly FileStream _Simple;
+
+    public WhenParsingTheDoc()
 		{
-			// Load the simple.taml doc and place it here
+			
+			_Simple = File.OpenRead("GivenSimplestTamlDoc/simple.taml");
+
 		}
 
 
@@ -16,7 +22,14 @@ namespace TAML.Test.Taml.NET.GivenSimplestTamlDoc
 		public void ShouldFindTwoKeyValuePairs()
 		{
 
-			Assert.False(true);
+			// arrange
+			var sr = new StreamReader(_Simple);
+
+			// act
+			var result = Parser.Parse(sr);
+
+			// assert
+			Assert.Equal(2, result.KeyValuePairs.Count());
 
 		}
 	}
