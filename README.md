@@ -7,4 +7,4 @@ All TAML documents adhere to these rules STRICTLY
 1. Keys and values are separated by 1+ tab characters (\t)
 1. Subkeys are defined on a line starting with 1+ tab characters (\t)
 1. Presence of space characters are illegal
-1. Comments shall start with `--` characters and the remainder of the line shall be ignored
+1. Comments **TBD**
