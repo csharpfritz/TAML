@@ -1,15 +1,13 @@
-﻿using System;
-using System.IO;
 using System.Linq;
 using TAML;
 using Xunit;
 
 namespace Test.Taml.NET.GivenOnlyKeyValuePairs
 {
-	public class WhenSimplestMarkup : BaseFixture
+	public class WhenArrayFirst : BaseFixture
 	{
 
-		protected override string SampleFilename => "GivenOnlyKeyValuePairs/simple.taml";
+		protected override string SampleFilename => "GivenKeyValuePairsWithArray/arrayfirst.taml";
 
 
 		[Fact]

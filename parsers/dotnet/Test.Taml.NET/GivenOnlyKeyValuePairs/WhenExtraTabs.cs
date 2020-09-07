@@ -2,7 +2,7 @@ using System.IO;
 using TAML;
 using Xunit;
 
-namespace Test.Taml.NET.GivenOnlyKeyValuePairs {
+namespace Taml.NET.GivenOnlyKeyValuePairs {
 
   public class WhenExtraTabs
   {

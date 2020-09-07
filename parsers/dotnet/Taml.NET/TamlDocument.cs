@@ -6,12 +6,6 @@ namespace TAML
 
 		public Dictionary<string,TamlValue> KeyValuePairs { get; set; } = new Dictionary<string, TamlValue>();
 
-		// public string this[int index]
-		// {
-		// 	get {  }
-		// 	set {  }
-		// }
-
 	}
 
   public class TamlValue

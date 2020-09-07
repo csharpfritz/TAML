@@ -29,7 +29,7 @@ namespace TAML
 					} else {
 						currentArray.AppendValue(line.Trim());
 					}
-				} else {
+				} else if (_KeyValuePair.IsMatch(line)) { 
 
 					// cleanup any arrays or items that need to be added
 

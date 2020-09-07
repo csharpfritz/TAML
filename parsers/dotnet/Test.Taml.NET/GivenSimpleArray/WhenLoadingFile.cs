@@ -3,61 +3,58 @@ using System.Linq;
 using TAML;
 using Xunit;
 
-namespace Test.Taml.NET {
+namespace Test.Taml.NET
+{
 
-  public class WhenLoadingFile  : BaseFixture
-  {
+	public class WhenLoadingFile : BaseFixture
+	{
 
-	  [Fact]
-	  public void ThenShouldFindAnArray()
-	  {
+		public WhenLoadingFile() : base()
+		{
+			
+		}
 
-		var result = Parser.Parse(base.SimpleFile);
+		protected override string SampleFilename => "GivenSimpleArray/simple.taml";
 
-		Assert.Equal(1, result.KeyValuePairs.Count);
-		Assert.IsType<TamlArray>(result.KeyValuePairs.First().Value);
+		[Fact]
+		public void ThenShouldFindAnArray()
+		{
 
-	  }
+			var result = Parser.Parse(base.Sample);
 
-	  [Fact]
-	  public void ThenArrayShouldContainThreeElements()
-	  {
+			Assert.Equal(1, result.KeyValuePairs.Count);
+			Assert.IsType<TamlArray>(result.KeyValuePairs.First().Value);
 
-		  var result = Parser.Parse(base.SimpleFile);
+		}
 
-		  var entry = result.KeyValuePairs.First();
-		  Assert.Equal("key", entry.Key);
+		[Fact]
+		public void ThenArrayShouldContainThreeElements()
+		{
 
-		  var array = entry.Value as TamlArray;
-		  Assert.Equal(3, array.Count());
+			var result = Parser.Parse(base.Sample);
 
-	  }
+			var entry = result.KeyValuePairs.First();
+			Assert.Equal("key", entry.Key);
 
-	  [Fact]
-	  public void ThenArrayShouldIgnoreTrailingSpace()
-	  {
+			var array = entry.Value as TamlArray;
+			Assert.Equal(3, array.Count());
 
-		  var result = Parser.Parse(base.SimpleFile);
+		}
 
-		  var entry = result.KeyValuePairs.First();
-		  Assert.Equal("key", entry.Key);
+		[Fact]
+		public void ThenArrayShouldIgnoreTrailingSpace()
+		{
 
-		  var array = entry.Value as TamlArray;
-		  Assert.Equal("value3", array[2]);
+			var result = Parser.Parse(base.Sample);
 
-	  }
+			var entry = result.KeyValuePairs.First();
+			Assert.Equal("key", entry.Key);
 
-  }
+			var array = entry.Value as TamlArray;
+			Assert.Equal("value3", array[2]);
 
-  public abstract class BaseFixture {
+		}
 
-	  public BaseFixture()
-	  {
-		  SimpleFile = new StreamReader("GivenSimpleArray/simple.taml");
-	  }
-
-	  public StreamReader SimpleFile { get; }
-
-  }
+	}
 
 }

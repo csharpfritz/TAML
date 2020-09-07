@@ -30,6 +30,12 @@
     <None Update="GivenSimpleArray\simple.taml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="GivenKeyValuePairsWithArray\sample.taml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GivenKeyValuePairsWithArray\arrayfirst.taml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 
