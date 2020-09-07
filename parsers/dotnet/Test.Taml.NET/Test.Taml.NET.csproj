@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="GivenSimplestTamlDoc\simple.taml">
+    <None Update="GivenOnlyKeyValuePairs\simple.taml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

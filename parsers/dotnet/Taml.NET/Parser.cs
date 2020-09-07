@@ -17,6 +17,7 @@ namespace TAML
 
 			while (!rdr.EndOfStream) {
 				var line = rdr.ReadLine();
+				Console.WriteLine(line + "-" + _KeyValuePair.Matches(line).Count);
 				var captures = _KeyValuePair.Matches(line)[0].Groups;
 				outDoc.KeyValuePairs.Add(captures["key"].Value, new TamlValue(captures["value"].Value));
 			}
