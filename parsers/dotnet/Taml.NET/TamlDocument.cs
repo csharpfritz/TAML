@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace TAML
 {
-	public class TamlDocument {
+  public class TamlDocument {
 
 		public Dictionary<string,TamlValue> KeyValuePairs { get; set; } = new Dictionary<string, TamlValue>();
 
@@ -17,6 +17,8 @@ namespace TAML
   public class TamlValue
   {
     private string value;
+
+	protected TamlValue() {}
 
     public TamlValue(string value)
     {
