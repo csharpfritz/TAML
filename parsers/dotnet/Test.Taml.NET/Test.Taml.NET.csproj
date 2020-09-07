@@ -27,6 +27,9 @@
     <None Update="GivenOnlyKeyValuePairs\simple.taml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="GivenSimpleArray\simple.taml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 
