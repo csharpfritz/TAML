@@ -24,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="GivenChildArrays\childarrays.taml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="GivenOnlyKeyValuePairs\simple.taml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

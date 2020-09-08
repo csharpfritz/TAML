@@ -28,6 +28,12 @@ namespace TAML
     {
       return ((IEnumerable)_Values).GetEnumerator();
     }
-  }
+
+		public override string ToString()
+		{
+			return string.Join(",", _Values);
+		}
+
+	}
 
 }

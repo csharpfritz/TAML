@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
 namespace TAML
@@ -14,13 +15,26 @@ namespace TAML
 		public static TamlDocument Parse(StreamReader rdr) {
 
 			rdr.BaseStream.Position = 0;
-			var currentLevel = 0;
+			byte currentLevel = 0;
+			byte previousLevel = 0;
 			TamlArray currentArray = null;
 			var currentLabel = string.Empty;
 			var outDoc = new TamlDocument();
 
 			while (!rdr.EndOfStream) {
+
+				previousLevel = currentLevel;
 				var line = rdr.ReadLine();
+				currentLevel = IdentifyLevel(line);
+
+				if (previousLevel > currentLevel) {
+					if (currentArray != null) {
+						outDoc.KeyValuePairs.Add(currentLabel, currentArray);
+						currentArray = null;
+						currentLabel = string.Empty;
+					}
+				}
+
 				if (_SingleValue.IsMatch(line)) {
 					if (string.IsNullOrEmpty(currentLabel)) {
 						currentLabel = line.Trim();
@@ -29,6 +43,7 @@ namespace TAML
 					} else {
 						currentArray.AppendValue(line.Trim());
 					}
+
 				} else if (_KeyValuePair.IsMatch(line)) { 
 
 					// cleanup any arrays or items that need to be added
@@ -51,7 +66,7 @@ namespace TAML
 			byte outValue = 0;
 
 			for (byte i=0; i<line.Length; i++) {
-				if (line[i] == '\t') outValue = i;
+				if (line[i] == '\t') outValue++;
 				else break;
 			}
 
