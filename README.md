@@ -9,3 +9,5 @@ All TAML documents adhere to these rules STRICTLY
 1. An array is a key with multiple child values
 1. Presence of space characters are illegal
 1. Comments **TBD**
+
+Tabs are important to us, the project maintainers, after we read this [article about how they are NOT accessible to all developers](https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/).
