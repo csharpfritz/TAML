@@ -3,7 +3,7 @@ using TAML;
 using Test.Taml.NET;
 using Xunit;
 
-namespace Taml.NET.GivenKeyValuePairsWithArray
+namespace Test.Taml.NET.GivenKeyValuePairsWithArray
 {
 	public class WhenParserReadsDocument : BaseFixture
 	{
@@ -14,7 +14,7 @@ namespace Taml.NET.GivenKeyValuePairsWithArray
 		public void ShouldFindTwoKeyPairs()
 		{
 
-			var doc = Parser.Parse(base.Sample);
+			var doc = Parser.Parse(Sample);
 
 			Assert.Equal(2, doc.KeyValuePairs.Count);
 

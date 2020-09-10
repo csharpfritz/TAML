@@ -27,6 +27,12 @@
     <None Update="GivenChildArrays\childarrays.taml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="GivenComplexChildDocument\sample1.taml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="GivenMultipleRoots\sample1.taml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="GivenOnlyKeyValuePairs\simple.taml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

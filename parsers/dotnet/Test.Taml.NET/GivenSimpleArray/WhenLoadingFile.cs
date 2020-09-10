@@ -1,9 +1,9 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
 using TAML;
 using Xunit;
 
-namespace Test.Taml.NET
+namespace Test.Taml.NET.GivenSimpleArray
 {
 
 	public class WhenLoadingFile : BaseFixture
@@ -11,7 +11,7 @@ namespace Test.Taml.NET
 
 		public WhenLoadingFile() : base()
 		{
-			
+
 		}
 
 		protected override string SampleFilename => "GivenSimpleArray/simple.taml";
@@ -20,7 +20,7 @@ namespace Test.Taml.NET
 		public void ThenShouldFindAnArray()
 		{
 
-			var result = Parser.Parse(base.Sample);
+			var result = Parser.Parse(Sample);
 
 			Assert.Equal(1, result.KeyValuePairs.Count);
 			Assert.IsType<TamlArray>(result.KeyValuePairs.First().Value);
@@ -31,7 +31,7 @@ namespace Test.Taml.NET
 		public void ThenArrayShouldContainThreeElements()
 		{
 
-			var result = Parser.Parse(base.Sample);
+			var result = Parser.Parse(Sample);
 
 			var entry = result.KeyValuePairs.First();
 			Assert.Equal("key", entry.Key);
@@ -45,13 +45,13 @@ namespace Test.Taml.NET
 		public void ThenArrayShouldIgnoreTrailingSpace()
 		{
 
-			var result = Parser.Parse(base.Sample);
+			var result = Parser.Parse(Sample);
 
 			var entry = result.KeyValuePairs.First();
 			Assert.Equal("key", entry.Key);
 
 			var array = entry.Value as TamlArray;
-			Assert.Equal("value3", array[2]);
+			Assert.Equal("value3", array[2].ToString());
 
 		}
 

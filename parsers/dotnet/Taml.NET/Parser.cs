@@ -41,7 +41,7 @@ namespace TAML
 						// add existing array to the doc
 						currentArray = new TamlArray();
 					} else {
-						currentArray.AppendValue(line.Trim());
+						currentArray.AppendValue(new TamlValue(line.Trim()));
 					}
 
 				} else if (_KeyValuePair.IsMatch(line)) { 
@@ -50,7 +50,13 @@ namespace TAML
 
 					Console.WriteLine(line + "-" + _KeyValuePair.Matches(line).Count);
 					var captures = _KeyValuePair.Matches(line)[0].Groups;
-					outDoc.KeyValuePairs.Add(captures["key"].Value, new TamlValue(captures["value"].Value));
+
+					if (string.IsNullOrEmpty(currentLabel))
+					{
+						outDoc.KeyValuePairs.Add(captures["key"].Value, new TamlValue(captures["value"].Value));
+					} else {
+						currentArray.AppendValue(new TamlKeyValuePair(captures["key"].Value, new TamlValue(captures["value"].Value)));
+					}
 				}
 			}
 
