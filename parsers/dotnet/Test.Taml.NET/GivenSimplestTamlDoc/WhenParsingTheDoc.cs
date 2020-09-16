@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
+
 using Xunit;
 
 namespace TAML.Test.Taml.NET.GivenSimplestTamlDoc
@@ -8,11 +9,11 @@ namespace TAML.Test.Taml.NET.GivenSimplestTamlDoc
 	public class WhenParsingTheDoc
 	{
 
-    private readonly FileStream _Simple;
+		private readonly FileStream _Simple;
 
-    public WhenParsingTheDoc()
+		public WhenParsingTheDoc()
 		{
-			
+
 			_Simple = File.OpenRead("GivenSimplestTamlDoc/simple.taml");
 
 		}

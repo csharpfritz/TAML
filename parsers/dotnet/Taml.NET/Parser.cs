@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -10,12 +10,14 @@ namespace TAML
 
 		private static readonly Regex _KeyValuePair = new Regex(@"(?<key>\S[^\t]*)\t+(?<value>\S[^\t]*)");
 
-		public static TamlDocument Parse(StreamReader rdr) {
+		public static TamlDocument Parse(StreamReader rdr)
+		{
 
 			rdr.BaseStream.Position = 0;
 			var outDoc = new TamlDocument();
 
-			while (!rdr.EndOfStream) {
+			while (!rdr.EndOfStream)
+			{
 				var line = rdr.ReadLine();
 				var captures = _KeyValuePair.Matches(line)[0].Groups;
 				outDoc.KeyValuePairs.Add(captures["key"].Value, new TamlValue(captures["value"].Value));
