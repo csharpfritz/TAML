@@ -3,7 +3,22 @@ root = true
 
 # Unix-style newlines with a newline ending every file
 [*]
-end_of_line = lf
-insert_final_newline = true
-indent_style = tab
-charset = utf-8
+end_of_line                                            = lf
+insert_final_newline                                   = true
+indent_style                                           = tab
+charset                                                = utf-8
+
+# IDE0022: Use expression body for methods
+dotnet_diagnostic.IDE0022.severity                     = silent
+
+# IDE0021: Use expression body for constructors
+dotnet_diagnostic.IDE0021.severity                     = silent
+
+# IDE0023: Use expression body for operators
+dotnet_diagnostic.IDE0023.severity                     = silent
+
+# IDE0046: Convert to conditional expression
+dotnet_style_prefer_conditional_expression_over_return = false : warning
+
+# IDE0026: Use expression body for indexers
+dotnet_diagnostic.IDE0026.severity                     = silent

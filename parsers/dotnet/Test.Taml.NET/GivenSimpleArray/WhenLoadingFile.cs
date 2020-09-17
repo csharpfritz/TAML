@@ -1,6 +1,8 @@
 using System.IO;
 using System.Linq;
+
 using TAML;
+
 using Xunit;
 
 namespace Test.Taml.NET.GivenSimpleArray
@@ -22,7 +24,7 @@ namespace Test.Taml.NET.GivenSimpleArray
 
 			var result = Parser.Parse(Sample);
 
-			Assert.Equal(1, result.KeyValuePairs.Count);
+			Assert.Single(result.KeyValuePairs);
 			Assert.IsType<TamlArray>(result.KeyValuePairs.First().Value);
 
 		}
