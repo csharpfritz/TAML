@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace TAML
 {
-	public static class TamlExtensionMethods 
+	public static class TamlExtensionMethods
 	{
 
 		public static void Add(this IList<TamlKeyValuePair> list, string key, TamlValue value)
@@ -13,7 +13,7 @@ namespace TAML
 
 		}
 
-		public static TamlValue FindByKey(this IList<TamlKeyValuePair> list, string key)
+		public static TamlValue? FindByKey(this IList<TamlKeyValuePair> list, string key)
 		{
 
 			return list.FirstOrDefault(p => p.Key == key).Value;

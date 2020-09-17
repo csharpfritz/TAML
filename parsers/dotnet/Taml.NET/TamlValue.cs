@@ -1,22 +1,23 @@
-﻿namespace TAML
+namespace TAML
 {
 	public class TamlValue
 	{
-		private string value;
+		private readonly string _Value = string.Empty;
 
 		protected TamlValue() { }
 
 		public TamlValue(string value)
 		{
-			this.value = value;
+			this._Value = value;
 		}
 
 		public override string ToString()
 		{
-			return value;
+			return _Value;
 		}
 
-		public static implicit operator string(TamlValue value) {
+		public static implicit operator string(TamlValue value)
+		{
 
 			return value.ToString();
 

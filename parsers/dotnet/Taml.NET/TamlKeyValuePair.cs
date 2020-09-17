@@ -2,11 +2,7 @@ namespace TAML
 {
 	public class TamlKeyValuePair : TamlValue
 	{
-		public TamlKeyValuePair()
-		{
-		}
-
-		public TamlKeyValuePair(string key, TamlValue value)
+		public TamlKeyValuePair(string key, TamlValue? value)
 		{
 			this.Key = key;
 			this.Value = value;
@@ -14,14 +10,14 @@ namespace TAML
 
 		public string Key { get; set; }
 
-		public TamlValue Value { get; set; }
+		public TamlValue? Value { get; set; }
 
 		public override string ToString()
 		{
-			return $"{Key}: {Value.ToString()}";
+			return $"{Key}: {Value?.ToString()}";
 		}
 
-		public static implicit operator string(TamlKeyValuePair value) 
+		public static implicit operator string(TamlKeyValuePair value)
 		{
 			return value.ToString();
 		}

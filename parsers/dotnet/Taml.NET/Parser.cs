@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
@@ -12,74 +14,109 @@ namespace TAML
 		private static readonly Regex _KeyValuePair = new Regex(@"(?<key>\S[^\t]*)\t+(?<value>\S[^\t]*)");
 		private static readonly Regex _SingleValue = new Regex(@"^\t*\S[^\t]*\t*$");
 
-		public static TamlDocument Parse(StreamReader rdr) {
+		public static TamlDocument Parse(StreamReader reader)
+		{
+			//return ParseNonRecursive(reader);
+			//var (_, parsedDocument) = ParseRecursive(0, reader); // We start parsing at the root (=0) level
+			//return (TamlDocument)parsedDocument!;
 
-			rdr.BaseStream.Position = 0;
-			byte currentLevel = 0;
-			byte previousLevel = 0;
-			TamlArray currentArray = null;
-			var currentLabel = string.Empty;
-			var outDoc = new TamlDocument();
+			var lines = ReadLines(reader);
 
-			while (!rdr.EndOfStream) {
+			var document = new TamlDocument();
 
-				previousLevel = currentLevel;
-				var line = rdr.ReadLine();
-				currentLevel = IdentifyLevel(line);
+			int currentLevel = 0;
 
-				if (previousLevel > currentLevel) {
-					if (currentArray != null) {
-						outDoc.KeyValuePairs.Add(currentLabel, currentArray);
-						currentArray = null;
-						currentLabel = string.Empty;
-					}
+			TamlKeyValuePair? parent = null;
+
+			for (var i = 0; i < lines.Count; i++)
+			{
+
+				var (indent, tamlValue) = lines[i];
+
+				var tamlKeyValuePair = tamlValue as TamlKeyValuePair;
+
+
+
+				if (indent == 0)
+				{
+					// line is root element
+					document.KeyValuePairs.Add(tamlKeyValuePair!);
+					currentLevel = 0;
 				}
+				else if (indent > currentLevel)
+				{
+					// belongs to the parrent
 
-				if (_SingleValue.IsMatch(line)) {
-					if (string.IsNullOrEmpty(currentLabel)) {
-						currentLabel = line.Trim();
-						// add existing array to the doc
-						currentArray = new TamlArray();
-					} else {
-						currentArray.AppendValue(new TamlValue(line.Trim()));
-					}
+					parent = lines[i - 1].value as TamlKeyValuePair;
 
-				} else if (_KeyValuePair.IsMatch(line)) { 
-
-					// cleanup any arrays or items that need to be added
-
-					Console.WriteLine(line + "-" + _KeyValuePair.Matches(line).Count);
-					var captures = _KeyValuePair.Matches(line)[0].Groups;
-
-					if (string.IsNullOrEmpty(currentLabel))
+					if (parent!.Value is null)
 					{
-						outDoc.KeyValuePairs.Add(captures["key"].Value, new TamlValue(captures["value"].Value));
-					} else {
-						currentArray.AppendValue(new TamlKeyValuePair(captures["key"].Value, new TamlValue(captures["value"].Value)));
+						var newValue = new TamlArray();
+						newValue.AppendValue(new TamlValue(tamlKeyValuePair!.Key));
+						parent.Value = newValue;
+						currentLevel = indent;
 					}
 				}
+				else if (indent < currentLevel)
+				{
+					// we have to go one indent level up
+					currentLevel = indent;
+					i--;
+				}
+				else if (indent == currentLevel && parent != null && parent.Value is TamlArray parrentArray)
+				{
+					parrentArray.AppendValue(new TamlValue(tamlKeyValuePair!.Key));
+				}
 			}
-
-			// add any leftover objects to the doc
-			if (currentArray != null) outDoc.KeyValuePairs.Add(currentLabel, currentArray);
-
-			return outDoc;
-
+			return document;
 		}
 
-		private static byte IdentifyLevel(string line) {
+		private static Dictionary<int, (int indent, TamlValue value)> ReadLines(StreamReader reader)
+		{
+			var lines = new Dictionary<int, (int indent, TamlValue value)>();
+			int currentLineNumber = 0;
 
-			byte outValue = 0;
+			while (!reader.EndOfStream)
+			{
+				var rawLine = reader.ReadLine();
+				var indent = CountIntendedTabs(rawLine);
+				var line = rawLine.Trim();
+				TamlKeyValuePair? value = null;
 
-			for (byte i=0; i<line.Length; i++) {
-				if (line[i] == '\t') outValue++;
-				else break;
+				if (string.IsNullOrEmpty(line))
+				{
+					// empty line we ignore
+					currentLineNumber--; // we don't count empty lines
+					continue;
+				}
+				else if (line.Contains('\t'))
+				{
+					// this is a KeyValuePair
+					var match = _KeyValuePair.Matches(line)[0].Groups;
+
+					value = new TamlKeyValuePair(match["key"].Value, new TamlValue(match["value"].Value));
+				}
+				else
+				{
+					// this is a single value
+					value = new TamlKeyValuePair(line, null);
+				}
+				lines.Add(currentLineNumber, (indent, value));
+				currentLineNumber++;
 			}
-
-			return outValue;
-
+			return lines;
 		}
 
+		private static int CountIntendedTabs(string currentLine)
+		{
+			int tabs = 0;
+
+			while (currentLine[tabs] == '\t')
+			{
+				tabs++;
+			}
+
+			return tabs;
+		}
 	}
-
 }
