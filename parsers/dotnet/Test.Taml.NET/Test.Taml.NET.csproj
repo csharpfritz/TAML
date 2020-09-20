@@ -24,7 +24,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="GivenSimplestTamlDoc\simple.taml">
+    <None Update="GivenChildArrays\childarrays.taml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="GivenComplexChildDocument\sample1.taml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="GivenMultipleRoots\sample1.taml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="GivenOnlyKeyValuePairs\simple.taml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GivenSimpleArray\simple.taml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GivenKeyValuePairsWithArray\sample.taml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="GivenKeyValuePairsWithArray\arrayfirst.taml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
