@@ -1,6 +1,8 @@
 # TAML - Tab Annotated Markup Language
 
-Defining the coolest and simplest markup language delimited ONLY by tabs and carriage returns
+Defining the coolest and simplest markup language delimited ONLY by tabs and carriage returns.  This started as a goof on YAML because @csharpfritz is not a fan of that markup technology, but grew into something that we believe may have a better purpose and functionality than YAML.
+
+The purpose of this markup language is to delimit and format configuration files as well as formatting data for storage and transmission.
 
 All TAML documents adhere to these rules STRICTLY
 1. New entries are separated by carriage returns (CR / CRLF)
