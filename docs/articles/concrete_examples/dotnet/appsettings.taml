@@ -4,4 +4,4 @@ Logging
 		Microsoft			Warning
 		Microsoft.Hosting.Lifetime	Information
 
-AllowedHosts	
+AllowedHosts	*
