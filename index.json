@@ -4,20 +4,15 @@
     "title": "python | TAML",
     "keywords": "python Issue 3"
   },
-  "README.html": {
-    "href": "README.html",
-    "title": "Official Documentation for TAML - Tab Annotated Markup Language | TAML",
-    "keywords": "Official Documentation for TAML - Tab Annotated Markup Language See index.md for the start of the documentation"
-  },
   "articles/README.html": {
     "href": "articles/README.html",
     "title": "TAML | TAML",
     "keywords": "TAML Specification Sample Documents and Test Suite Simple KeyValuePairs Simple Array Child Arrays Child KeyValue Pairs Available Interpreters dotNET python Mockups of Well-Known Documents as TAML Package.JSON -- Node Package Format Appsettings.JSON -- .NET Configuration Format kubernetes configuration.yml workflow.yml -- GitHub Action specification in YAML Test Suite Documents that illustrate common use patterns KeyValuePairs - A simple collection of KeyValuePairs in a document Arrays - An array of values that belong to a key value in a document Child Arrays - A set of top-level keys that each have an array associated Child KeyValuePairs - A complex document that features arrays and key value pairs mixed together"
   },
-  "articles/interpreters/dotnet.html": {
-    "href": "articles/interpreters/dotnet.html",
-    "title": ".NET | TAML",
-    "keywords": ".NET Issue 1"
+  "README.html": {
+    "href": "README.html",
+    "title": "Official Documentation for TAML - Tab Annotated Markup Language | TAML",
+    "keywords": "Official Documentation for TAML - Tab Annotated Markup Language See index.md for the start of the documentation"
   },
   "index.html": {
     "href": "index.html",
@@ -28,5 +23,10 @@
     "href": "articles/interpreters/javascript.html",
     "title": "JavaScript | TAML",
     "keywords": "JavaScript Not available yet: Issue 2"
+  },
+  "articles/interpreters/dotnet.html": {
+    "href": "articles/interpreters/dotnet.html",
+    "title": ".NET | TAML",
+    "keywords": ".NET Issue 1"
   }
 }
