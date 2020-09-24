@@ -73,6 +73,50 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/test_suite/1_keyvaluepairs.taml",
+      "output": {
+        "resource": {
+          "relative_path": "articles/test_suite/1_keyvaluepairs.taml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/test_suite/2_arrays.taml",
+      "output": {
+        "resource": {
+          "relative_path": "articles/test_suite/2_arrays.taml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/test_suite/3_childarrays.taml",
+      "output": {
+        "resource": {
+          "relative_path": "articles/test_suite/3_childarrays.taml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/test_suite/4_childkeyvaluepairs.taml",
+      "output": {
+        "resource": {
+          "relative_path": "articles/test_suite/4_childkeyvaluepairs.taml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
@@ -149,17 +193,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 6,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
           "skipped_file_count": 0
         }
       }
