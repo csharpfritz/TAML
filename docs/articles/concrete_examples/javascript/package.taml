@@ -1,0 +1,12 @@
+name        your-app
+version     0.1.0
+private     false
+proxy       https://www.your-site.com
+dependencies
+	@auth0/auth0-react  ^1.0.0
+
+scripts
+    start   craco start
+	build   craco build
+    test    nyc -x \"**/tests/**\" --reporter=cobertura --reporter=text-summary jest
+	eject   craco eject
