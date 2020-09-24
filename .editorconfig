@@ -22,3 +22,7 @@ dotnet_style_prefer_conditional_expression_over_return = false : warning
 
 # IDE0026: Use expression body for indexers
 dotnet_diagnostic.IDE0026.severity                     = silent
+
+[*.yml]
+indent_style                                           = space
+indent_size                                            = 2
