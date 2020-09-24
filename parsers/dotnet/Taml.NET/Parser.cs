@@ -71,6 +71,12 @@ namespace TAML
 			return document;
 		}
 
+		public static TamlDocument ParseFile(string fileName) {
+
+			var sr = new StreamReader(fileName);
+			return Parse(sr);
+
+		}
 		private static Dictionary<int, (int indent, TamlValue value)> ReadLines(StreamReader reader)
 		{
 			var lines = new Dictionary<int, (int indent, TamlValue value)>();
