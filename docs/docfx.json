@@ -19,7 +19,7 @@
 		"resource": [
 			{
 				"files": [
-					"images/**"
+					"images/**",
 					"articles/test_suite/**"
 				]
 			}
