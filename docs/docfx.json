@@ -9,9 +9,7 @@
 			},
 			{
 				"files": [
-					"articles/**.md",
-					"articles/**/toc.yml",
-					"articles/**/*.taml",
+					"articles/**",
 					"toc.yml",
 					"*.md"
 				]
