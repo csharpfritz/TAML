@@ -9,7 +9,8 @@
 			},
 			{
 				"files": [
-					"articles/**",
+					"articles/**.md",
+					"articles/**/toc.yml",
 					"toc.yml",
 					"*.md"
 				]
@@ -19,6 +20,7 @@
 			{
 				"files": [
 					"images/**"
+					"articles/test_suite/**"
 				]
 			}
 		],
