@@ -16,7 +16,7 @@
 	<RepositoryUrl>https://github.com/csharpfritz/TAML</RepositoryUrl>
 	<RepositoryType>GitHub</RepositoryType>
 	<PackageReleaseNotes>0.2 - First package release with basic parser</PackageReleaseNotes>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
