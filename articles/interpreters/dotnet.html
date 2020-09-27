@@ -79,7 +79,18 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="net">.NET</h1>
 
-<p><a href="https://github.com/csharpfritz/TAML/issues/1">Issue 1</a></p>
+<p>The .NET parser is available to allow you to read a TAML document and navigate it as a complex object tree.  There are TAMLArrays, TAMLValues, and TAMLKeyValuePairs that describe each of the appopriate TAML data structures in your document.</p>
+<h2 id="install-from-nuget">Install from NuGet</h2>
+<p>TBD</p>
+<h2 id="example-code">Example Code</h2>
+<h3 id="parsing-a-document">Parsing a document</h3>
+<pre><code class="lang-csharp">var doc = TAML.Parser.Parse(new StreamReader(&quot;SomeFile.taml&quot;));
+
+// Access the 3rd element in the array of objects 
+// under the root element and report it's name
+doc.rootElement[2].Name;
+</code></pre>
+<h3 id="traversing-a-document">Traversing a document</h3>
 </article>
           </div>
           
