@@ -17,18 +17,17 @@
 	-->
 	<PropertyGroup Condition=" '$(GITHUB_REF)' != 'refs/heads/main' And '$(GITHUB_EVENT_NAME)' != 'release'">
 		<MinVerBuildMetadata Condition=" '$(GITHUB_EVENT_NAME)' != '' ">$(GITHUB_EVENT_NAME.Replace('_','-')).</MinVerBuildMetadata>
-		<MinVerBuildMetadata>$(MinVerBuildMetadata)$(GITHUB_REF.Replace('_','-').Replace("refs/heads/", "").Replace("refs/tags/", "")).</MinVerBuildMetadata>
 		<MinVerBuildMetadata Condition=" '$(GITHUB_SHA)' != '' ">$(MinVerBuildMetadata)$(GITHUB_SHA.Remove(7)).</MinVerBuildMetadata>
 
 		<!-- some additional Env Vars that GitHub surfaces to us in an GitHub Action -->
-		<!--<MinVerBuildMetadata Condition=" '$(GITHUB_RUN_ID)' != '' ">$(MinVerBuildMetadata)$(GITHUB_RUN_ID).</MinVerBuildMetadata>
+		<!--<MinVerBuildMetadata Condition=" $(GITHUB_EVENT_NAME) != 'pull_request'">$(MinVerBuildMetadata)$(GITHUB_REF.Replace('_','-').Replace("refs/heads/", "").Replace("refs/tags/", "")).</MinVerBuildMetadata>
+		<MinVerBuildMetadata Condition=" '$(GITHUB_RUN_ID)' != '' ">$(MinVerBuildMetadata)$(GITHUB_RUN_ID).</MinVerBuildMetadata>
 		<MinVerBuildMetadata Condition=" '$(GITHUB_WORKFLOW)' != '' ">$(GITHUB_WORKFLOW)$(GITHUB_SHA).</MinVerBuildMetadata>
 		<MinVerBuildMetadata Condition=" '$(GITHUB_RUN_NUMBER)' != '' ">$(MinVerBuildMetadata)$(GITHUB_RUN_NUMBER).</MinVerBuildMetadata>
 		<MinVerBuildMetadata Condition=" '$(GITHUB_ACTOR)' != '' ">$(MinVerBuildMetadata)$(GITHUB_ACTOR).</MinVerBuildMetadata>-->
 
 		<MinVerBuildMetadata>$(MinVerBuildMetadata.TrimEnd('.'))</MinVerBuildMetadata>
 	</PropertyGroup>
-
 
 	<ItemGroup>
 		<PackageReference Include="MinVer" Version="2.3.1">
