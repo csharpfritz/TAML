@@ -9,8 +9,10 @@ The following is a set of guidelines for contributing to the project.  These are
     1. [Project Folder Structure](#project-folder-structure)
     1. [Design Decisions](#design-decisions)
 1. [How can I contribute?](#how-can-i-contribute?)
-    1. [Tell us your story](#tell-us-your-story)
-    1. [Write code for a component](#write-code-for-a-component)
+    1. [Tool suggestions for contributing](#tool-suggestions-for-contributing)
+    1. [Report a Bug](#report-a-bug)
+    3. [Look at the current issues](#Look-at-the-current-issues)
+    4. [Add a new issue](#add-a-new-issue)
     1. [Write documentation](#write-documentation)
 
 
