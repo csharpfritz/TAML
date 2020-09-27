@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<PackageId>TAML</PackageId>
+		<PackageId>Stelzi79.TAML</PackageId>
 		<Version>0.2.0</Version>
 		<Authors>Jeffrey T. Fritz and Friends</Authors>
 		<Company />
