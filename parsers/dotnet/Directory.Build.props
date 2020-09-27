@@ -14,7 +14,7 @@
 	<!-- Adds GITHUB_EVENT_NAME and GITHUB_SHA as BuildMetadata when this is not a build in the main branch -->
 	<PropertyGroup Condition=" '$(GITHUB_REF)' != 'main' ">
 		<MinVerBuildMetadata Condition=" '$(GITHUB_EVENT_NAME)' != '' ">$(GITHUB_EVENT_NAME.Replace('_','-')).</MinVerBuildMetadata>
-		<MinVerBuildMetadata>$(MinVerBuildMetadata)$(GITHUB_REF.Replace('_','-')).</MinVerBuildMetadata>
+		<MinVerBuildMetadata>$(MinVerBuildMetadata)$(GITHUB_REF.Replace('_','-').Replace("refs/heads/", "")).</MinVerBuildMetadata>
 		<MinVerBuildMetadata Condition=" '$(GITHUB_SHA)' != '' ">$(MinVerBuildMetadata)$(GITHUB_SHA).</MinVerBuildMetadata>
 
 		<!-- some additional Env Vars that GitHub surfaces to us in an GitHub Action -->
