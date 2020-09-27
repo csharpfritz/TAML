@@ -10,6 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F94246F3-EF85-4FAF-AC44-C0E69B9E656D}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\.editorconfig = ..\..\.editorconfig
+		..\..\CODE-OF-CONDUCT.md = ..\..\CODE-OF-CONDUCT.md
+		..\..\CONTRIBUTING.md = ..\..\CONTRIBUTING.md
 	EndProjectSection
 EndProject
 Global
