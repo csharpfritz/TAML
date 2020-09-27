@@ -1,0 +1,15 @@
+<Project>
+	<PropertyGroup>
+		<LangVersion>8</LangVersion>
+		<Nullable>enable</Nullable>
+		<MinVerVerbosity>normal</MinVerVerbosity>
+		<MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MinVer" Version="2.3.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+</Project>
