@@ -29,15 +29,15 @@ This project is currently a single library that will provide a shim, a buffer th
 This project is designed to be built and run primarily with Visual Studio 2019. The folders are configured so that they will support editing and working in other editors and on non-Windows operating systems.  We encourage you to develop with these other environments, because we would like to be able to support developers who use those tools as well.  The folders are configured as follows:
 
 ```
-/docs																		-- User Documentation
-/parsers																-- TAML Parsers
-	/dotnet
-		/Taml.NET
-		/Test.Taml.NET											-- Unit tests
-	/python
-		/src
-			/pytaml
-		/tests															-- Unit tests
+/docs                                  -- User Documentation
+/parsers                               -- TAML Parsers
+  /dotnet
+    /Taml.NET                          -- DotNet Parser
+    /Test.Taml.NET                     -- Unit tests
+  /python
+    /src
+      /pytaml                          -- Python Parser
+    /tests                             -- Unit tests
 
 ```
 
