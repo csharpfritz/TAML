@@ -1,4 +1,4 @@
-# Contributing to BlazorWebFormsComponents
+# Contributing to the TAML project
 
 Thank you for taking the time to consider contributing to our project.
 
@@ -22,7 +22,9 @@ We have adopted a code of conduct from the Contributor Covenant.  Contributors t
 
 ## What should I know before I get started?
 
-This project is currently a single library that will provide a shim, a buffer that will help you convert markup to run in Blazor. The project will grow in the future to support more automated conversion from ASP<span></span>.NET Web Forms to Blazor.
+This project is defining the coolest and simplest markup language delimited ONLY by tabs and carriage returns.  This started as a goof on YAML because @csharpfritz is not a fan of that markup technology, but grew into something that we believe may have a better purpose and functionality than YAML.
+
+The purpose of this markup language is to delimit and format configuration files as well as formatting data for storage and transmission
 
 ### Project Folder Structure
 
@@ -41,7 +43,7 @@ This project is designed to be built and run primarily with Visual Studio 2019. 
 
 ```
 
-All official versions of the project are built and delivered with GitHub Actions and linked in the main README.md and [releases tab in GitHub](https://github.com/FritzAndFriends/BlazorWebFormsComponents/releases).
+All official versions of the project are built and delivered with GitHub Actions and linked in the main README.md and [releases tab in GitHub](https://github.com/csharpfritz/TAML/releases).
 
 ### Design Decisions
 
