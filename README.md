@@ -12,6 +12,8 @@ All TAML documents adhere to these rules STRICTLY
 1. Presence of space characters are illegal
 1. Comments **TBD**
 
+Mime-type for TAML documents should be `application/taml`
+
 Tabs are important to us, the project maintainers, after we read this [article about how they are NOT accessible to all developers](https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/).
 
 Documentation website is starting at:  https://csharpfritz.github.io/TAML/
