@@ -1,24 +1,25 @@
-name: Publish to NuGet
-
+name: publish to nuget
 on:
- release:
-   types: [published]
-
+  release:
+    types: [ published ]
+        
 jobs:
   publish:
-    name: Publish to NuGet
+    name: build, pack & publish
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 3.1.100
-      
-      - name: Publish
+      - uses: actions/checkout@v2
+
+      # Publish
+      - name: publish on version change
+        id: publish_nuget
         uses: rohith/publish-nuget@v2
         with:
+          # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: parsers/dotnet/Taml.NET/Taml.NET.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}} # nuget.org API key
+          
+          # Useful with external providers like Nerdbank.GitVersioning, ignores VERSION_FILE_PATH & VERSION_REGEX
+          VERSION_STATIC: ${{ github.event.release.tag_name }}
+
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
