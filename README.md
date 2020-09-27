@@ -4,7 +4,11 @@ Defining the coolest and simplest markup language delimited ONLY by tabs and car
 
 The purpose of this markup language is to delimit and format configuration files as well as formatting data for storage and transmission.
 
-All TAML documents adhere to these rules STRICTLY
+You can get TAML parsers and handlers for your favorite programming languages and frameworks at:
+
+[![Nuget](https://img.shields.io/nuget/v/TAML?color=%239146FF)](https://www.nuget.org/packages/TAML/)
+
+### All TAML documents adhere to these rules STRICTLY
 1. New entries are separated by carriage returns (CR / CRLF)
 1. Keys and values are separated by 1+ tab characters (\t)
 1. Subkeys are defined on a line starting with 1+ tab characters (\t)
