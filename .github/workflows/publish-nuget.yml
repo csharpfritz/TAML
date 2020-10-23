@@ -1,8 +1,8 @@
 name: publish to nuget
 on:
   release:
-    types: [ published ]
-        
+    types: [published]
+
 jobs:
   publish:
     name: build, pack & publish
@@ -17,10 +17,10 @@ jobs:
         with:
           # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: parsers/dotnet/Taml.NET/Taml.NET.csproj
-          
+
           # Useful with external providers like Nerdbank.GitVersioning, ignores VERSION_FILE_PATH & VERSION_REGEX
           VERSION_STATIC: ${{ github.event.release.tag_name }}
-          
+
           # Flag to toggle git tagging, enabled by default
           TAG_COMMIT: false
 
