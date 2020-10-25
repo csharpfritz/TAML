@@ -3,4 +3,4 @@
 - name: Interpreters
   href: interpreters/toc.yml
 - name: Test Suite
-  href: articles/test_suite/README.md
+  href: articles/test_suite.md

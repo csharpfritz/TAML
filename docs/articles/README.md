@@ -10,7 +10,7 @@ TAML attempts to provide a very simple message format that can be used for netwo
 1. An array is a key with multiple child values
 1. Presence of space characters are illegal
 
-A test suite of documents is available at the root of the GitHub repository and more information is provided in the [Test Suite documentation topic](test_suite/README.md).
+A test suite of documents is available at the root of the GitHub repository and more information is provided in the [Test Suite documentation topic](test_suite.md).
 
 ## Available Interpreters
 
