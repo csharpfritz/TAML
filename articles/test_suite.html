@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>TAML | TAML </title>
+    <title>The TAML Test Suite | TAML </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="TAML | TAML ">
+    <meta name="title" content="The TAML Test Suite | TAML ">
     <meta name="generator" content="docfx 2.45.1.0">
     
     <link rel="shortcut icon" href="../images/FritzAndFriends.ico">
@@ -77,30 +77,28 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="taml">TAML</h1>
+<h1 id="the-taml-test-suite">The TAML Test Suite</h1>
 
-<h2 id="specification">Specification</h2>
-<p>TAML attempts to provide a very simple message format that can be used for network communications or hierarchical configuration storage on disk.  It is defined by these 5 simple rules:</p>
+<p>To ensure compatibility between tools working with TAML files, we have provided a standard test suite of documents that help define the various levels of support.  Test Suite files reside in the <code>/test_suite</code> folder of the <a href="https://github.com/csharpfritz/TAML">GitHub repository</a> and are reproduced below with descriptions of how they should each be interpreted</p>
+<h2 id="naming-convention">Naming Convention</h2>
+<p>Compatibility levels are defined with teh first digit of the test suite file name, followed by an index number, a brief description, and the standard <code>.taml</code> file extension.</p>
+<pre><code>1_01_keyvaluepairs.taml
+</code></pre>
+<h2 id="compatibility-level-1">Compatibility Level 1</h2>
+<p>The initial release of the TAML specification is supported by these test suite definitions that provide the foundation of TAML interactions</p>
+<h3 id="1_01---keyvaluepairs">1_01 - KeyValuePairs</h3>
+<p>The first test ensures that the first two tenets of TAML are met and enforced:</p>
 <ol>
 <li>New entries are separated by carriage returns (CR / CRLF)</li>
 <li>Keys and values are separated by 1+ tab characters (\t)</li>
-<li>Subkeys are defined on a line starting with 1+ tab characters (\t)</li>
-<li>An array is a key with multiple child values</li>
-<li>Presence of space characters are illegal</li>
 </ol>
-<p>A test suite of documents is available at the root of the GitHub repository and more information is provided in the <a href="test_suite.html">Test Suite documentation topic</a>.</p>
-<h2 id="available-interpreters">Available Interpreters</h2>
-<ul>
-<li><a href="interpreters/dotnet.html">dotNET</a></li>
-<li><a href="interpreters/python.html">python</a></li>
-</ul>
-<h2 id="mockups-of-well-known-documents-as-taml">Mockups of Well-Known Documents as TAML</h2>
-<ul>
-<li>Package.JSON -- Node Package Format</li>
-<li>Appsettings.JSON -- .NET Configuration Format</li>
-<li>kubernetes configuration.yml</li>
-<li>workflow.yml -- GitHub Action specification in YAML</li>
-</ul>
+<p>There are 4 entries that should each be recognized as a key/value pair.  New entries are presented on new lines and each key/value pair is separated by one or more tab (\t) characters.</p>
+<pre><code>key1	value1
+key2	value2
+key3		value3
+key4					value4
+</code></pre>
+<h3 id="1_02---arrays">1_02 - Arrays</h3>
 </article>
           </div>
           
