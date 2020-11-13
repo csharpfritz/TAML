@@ -4,11 +4,6 @@
     "title": "Official Documentation for TAML - Tab Annotated Markup Language | TAML",
     "keywords": "Official Documentation for TAML - Tab Annotated Markup Language See index.md for the start of the documentation"
   },
-  "articles/README.html": {
-    "href": "articles/README.html",
-    "title": "TAML | TAML",
-    "keywords": "TAML Specification TAML attempts to provide a very simple message format that can be used for network communications or hierarchical configuration storage on disk. It is defined by these 5 simple rules: New entries are separated by carriage returns (CR / CRLF) Keys and values are separated by 1+ tab characters (\\t) Subkeys are defined on a line starting with 1+ tab characters (\\t) An array is a key with multiple child values Presence of space characters are illegal A test suite of documents is available at the root of the GitHub repository and more information is provided in the Test Suite documentation topic . Available Interpreters dotNET python Mockups of Well-Known Documents as TAML Package.JSON -- Node Package Format Appsettings.JSON -- .NET Configuration Format kubernetes configuration.yml workflow.yml -- GitHub Action specification in YAML"
-  },
   "articles/interpreters/dotnet.html": {
     "href": "articles/interpreters/dotnet.html",
     "title": ".NET | TAML",
@@ -33,5 +28,10 @@
     "href": "articles/interpreters/python.html",
     "title": "python | TAML",
     "keywords": "python Issue 3"
+  },
+  "articles/README.html": {
+    "href": "articles/README.html",
+    "title": "TAML | TAML",
+    "keywords": "TAML Specification TAML attempts to provide a very simple message format that can be used for network communications or hierarchical configuration storage on disk. It is defined by these 5 simple rules: New entries are separated by carriage returns (CR / CRLF) Keys and values are separated by 1+ tab characters (\\t) Subkeys are defined on a line starting with 1+ tab characters (\\t) An array is a key with multiple child values Presence of space characters are illegal A test suite of documents is available at the root of the GitHub repository and more information is provided in the Test Suite documentation topic . Available Interpreters dotNET python Mockups of Well-Known Documents as TAML Package.JSON -- Node Package Format Appsettings.JSON -- .NET Configuration Format kubernetes configuration.yml workflow.yml -- GitHub Action specification in YAML"
   }
 }
