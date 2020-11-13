@@ -82,6 +82,15 @@
 <p>To ensure compatibility between tools working with TAML files, we have provided a standard test suite of documents that help define the various levels of support.  Test Suite files reside in the <code>/test_suite</code> folder of the <a href="https://github.com/csharpfritz/TAML">GitHub repository</a> and are reproduced below with descriptions of how they should each be interpreted</p>
 <h2 id="naming-convention">Naming Convention</h2>
 <p>Compatibility levels are defined with teh first digit of the test suite file name, followed by an index number, a brief description, and the standard <code>.taml</code> file extension.</p>
+<h2 id="definitions">Definitions</h2>
+<ul>
+<li><strong>Entries</strong> in TAML are contiguous blocks of text that do NOT contain a tab (\t) character.</li>
+<li><strong>Keys</strong> are an entry defined with one or more corresponding entries</li>
+<li><strong>Values</strong> are entries associated with a Key</li>
+<li><strong>Complex Values</strong> are entries comprised of a combination of Keys and Values</li>
+<li><strong>Key Value Pairs</strong> are a Complex Value made up of a Key and a Value</li>
+<li><strong>Arrays</strong> are a Complex Value comprised of a Key with multiple Values</li>
+</ul>
 <pre><code>1_01_keyvaluepairs.taml
 </code></pre>
 <h2 id="compatibility-level-1">Compatibility Level 1</h2>
@@ -99,6 +108,60 @@ key3		value3
 key4					value4
 </code></pre>
 <h3 id="1_02---arrays">1_02 - Arrays</h3>
+<p>The second test ensure that tenet 4 is met:</p>
+<p>An array is a key with multiple child values</p>
+<p>Child values appear on a new line with one additional indent compared to the key value above it.  Additional child values can be defined on proceeding lines at the same indentation level.</p>
+<p>This test should present 1 array defined by <code>key</code> containing 3 values.</p>
+<pre><code>key
+        value1
+        value2
+        value3
+</code></pre>
+<h3 id="1_03---child-arrays">1_03 - Child Arrays</h3>
+<p>The third test combines the first two features and tests for support of an array of three arrays each containing three values.</p>
+<pre><code>value1
+        value12
+        value13
+        value14
+value2
+        value22
+        value23
+        value24
+value3
+        value32
+        value33
+        value34
+</code></pre>
+<h3 id="1_04---child-key-value-pairs">1_04 - Child Key Value Pairs</h3>
+<p>The fourth test combines the key value pair feature with the array feature to ensure support of a more complex structure that contains arrays of key value pairs with some values that are themselves arrays of more values and key value pairs.</p>
+<p>This sample should be parsed and return the following structure:</p>
+<ul>
+<li>A single array with a key named <code>root</code></li>
+<li>Three values in the array:
+<ul>
+<li>2 key value pairs</li>
+<li>An array defined by <code>key3</code> with 4 values:
+<ul>
+<li><code>item1</code>, <code>item2</code>, <code>item3</code></li>
+<li><code>item4</code> defines another array with 4 key value pairs as values</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>root
+        key1            value1
+        key2            value2
+        key3
+                item1
+                item2
+                item3
+                item4
+                        key41                   value41
+                        key42                   value42
+                        key43                   value43
+                        key44                   value44
+</code></pre>
 </article>
           </div>
           
