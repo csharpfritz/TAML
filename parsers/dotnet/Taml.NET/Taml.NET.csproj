@@ -1,22 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-	  <LangVersion>8.0</LangVersion>
-	<Nullable>enable</Nullable>
-	<PackageId>TAML</PackageId>
-	<Version>0.2.0</Version>
-	<Authors>Jeffrey T. Fritz and Friends</Authors>
-	<Company />
-	<Product></Product>
-	<Description>TAML Parser and interpreter for .NET</Description>
-	<Copyright>Copyright Jeffrey T. Fritz 2020</Copyright>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageProjectUrl>https://github.com/csharpfritz/TAML</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/csharpfritz/TAML</RepositoryUrl>
-	<RepositoryType>GitHub</RepositoryType>
-	<PackageReleaseNotes>0.2 - First package release with basic parser</PackageReleaseNotes>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>TAML</PackageId>
+		<Version>0.2.0</Version>
+		<Authors>Jeffrey T. Fritz and Friends</Authors>
+		<Company />
+		<Product></Product>
+		<Description>TAML Parser and interpreter for .NET</Description>
+		<Copyright>Copyright Jeffrey T. Fritz 2020</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/csharpfritz/TAML</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/csharpfritz/TAML</RepositoryUrl>
+		<RepositoryType>GitHub</RepositoryType>
+		<PackageReleaseNotes>0.2 - First package release with basic parser</PackageReleaseNotes>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 
 </Project>
