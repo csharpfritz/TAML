@@ -6,7 +6,7 @@ dependencies
 	@auth0/auth0-react  ^1.0.0
 
 scripts
-    start   craco start
+	start   craco start
 	build   craco build
-    test    nyc -x \"**/tests/**\" --reporter=cobertura --reporter=text-summary jest
+	test    nyc -x \"**/tests/**\" --reporter=cobertura --reporter=text-summary jest
 	eject   craco eject
