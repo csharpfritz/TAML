@@ -82,16 +82,16 @@
 <p>To ensure compatibility between tools working with TAML files, we have provided a standard test suite of documents that help define the various levels of support.  Test Suite files reside in the <code>/test_suite</code> folder of the <a href="https://github.com/csharpfritz/TAML">GitHub repository</a> and are reproduced below with descriptions of how they should each be interpreted</p>
 <h2 id="naming-convention">Naming Convention</h2>
 <p>Compatibility levels are defined with teh first digit of the test suite file name, followed by an index number, a brief description, and the standard <code>.taml</code> file extension.</p>
-<h2 id="definitions">Definitions</h2>
-<ul>
-<li><strong>Entries</strong> in TAML are contiguous blocks of text that do NOT contain a tab (\t) character.</li>
-<li><strong>Keys</strong> are an entry defined with one or more corresponding entries</li>
-<li><strong>Values</strong> are entries associated with a Key</li>
-<li><strong>Complex Values</strong> are entries comprised of a combination of Keys and Values</li>
-<li><strong>Key Value Pairs</strong> are a Complex Value made up of a Key and a Value</li>
-<li><strong>Arrays</strong> are a Complex Value comprised of a Key with multiple Values</li>
-</ul>
 <pre><code>1_01_keyvaluepairs.taml
+
+## Definitions
+
+- **Entries** in TAML are contiguous blocks of text that do NOT contain a tab (\t) character.  
+- **Keys** are an entry defined with one or more corresponding entries
+- **Values** are entries associated with a Key
+- **Complex Values** are entries comprised of a combination of Keys and Values
+- **Key Value Pairs** are a Complex Value made up of a Key and a Value
+- **Arrays** are a Complex Value comprised of a Key with multiple Values
 </code></pre>
 <h2 id="compatibility-level-1">Compatibility Level 1</h2>
 <p>The initial release of the TAML specification is supported by these test suite definitions that provide the foundation of TAML interactions</p>

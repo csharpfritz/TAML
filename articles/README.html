@@ -80,6 +80,7 @@
 <h1 id="taml">TAML</h1>
 
 <h2 id="specification">Specification</h2>
+<h3 id="version-10">Version 1.0</h3>
 <p>TAML attempts to provide a very simple message format that can be used for network communications or hierarchical configuration storage on disk.  It is defined by these 5 simple rules:</p>
 <ol>
 <li>New entries are separated by carriage returns (CR / CRLF)</li>
@@ -89,6 +90,26 @@
 <li>Presence of space characters are illegal</li>
 </ol>
 <p>A test suite of documents is available at the root of the GitHub repository and more information is provided in the <a href="test_suite.html">Test Suite documentation topic</a>.</p>
+<h3 id="version-11">Version 1.1</h3>
+<p>The 1.1 specification for TAML adds support for Processor Directives and comments in the file format.  In keeping with the spirit of each line in a file is a distinct record, only single-line comments are supported and directives appear on a single line with a namespaced directive, at least one tab, and then the value assigned.</p>
+<pre><code># This is a TAML comment
+! TAML.EmptyArraySupported		FALSE
+</code></pre>
+<p>Additionally, we introducing the <code>!</code> escape character to help indicate empty values and empty arrays.</p>
+<ul>
+<li>Key value pairs without an associated value use <code>!&quot;&quot;</code> to indicate an empty string.</li>
+<li>Empty Arrays are indicated with a <code>![]</code> on the same line as the array key.</li>
+</ul>
+<pre><code># This is a key with an empty value
+key			!&quot;&quot;
+
+# This is an empty array defined by arrayKey
+arrayKey
+	![]
+
+myArray
+	!&quot;&quot;
+</code></pre>
 <h2 id="available-interpreters">Available Interpreters</h2>
 <ul>
 <li><a href="interpreters/dotnet.html">dotNET</a></li>
