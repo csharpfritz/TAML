@@ -38,6 +38,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/concrete_examples/javascript/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concrete_examples/javascript/README.html",
+          "hash": "Wv1rs5weOUEsNHlA2N7JCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/concrete_examples/yml/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concrete_examples/yml/README.html",
+          "hash": "0VPV1SRBx3WWG/0S0brHGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/interpreters/dotnet.md",
       "output": {
         ".html": {
@@ -164,7 +188,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 7,
+          "total_file_count": 9,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
