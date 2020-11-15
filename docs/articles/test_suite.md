@@ -6,6 +6,9 @@ To ensure compatibility between tools working with TAML files, we have provided 
 
 Compatibility levels are defined with teh first digit of the test suite file name, followed by an index number, a brief description, and the standard `.taml` file extension.
 
+```
+1_01_keyvaluepairs.taml
+
 ## Definitions
 
 - **Entries** in TAML are contiguous blocks of text that do NOT contain a tab (\t) character.  
@@ -14,9 +17,6 @@ Compatibility levels are defined with teh first digit of the test suite file nam
 - **Complex Values** are entries comprised of a combination of Keys and Values
 - **Key Value Pairs** are a Complex Value made up of a Key and a Value
 - **Arrays** are a Complex Value comprised of a Key with multiple Values
-
-```
-1_01_keyvaluepairs.taml
 ```
 
 ## Compatibility Level 1
