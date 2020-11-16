@@ -35,7 +35,8 @@ namespace Test.Taml.NET.GivenComplexChildDocument
 			var rootValue = ((TamlArray)doc.KeyValuePairs.First().Value);
 			Assert.IsType<TamlKeyValuePair>(rootValue[0]);
 			Assert.IsType<TamlKeyValuePair>(rootValue[1]);
-			Assert.IsType<TamlArray>(rootValue[2]);
+			Assert.IsType<TamlKeyValuePair>(rootValue[2]);
+			Assert.IsType<TamlArray>((rootValue[2] as TamlKeyValuePair).Value);
 		}
 	}
 }

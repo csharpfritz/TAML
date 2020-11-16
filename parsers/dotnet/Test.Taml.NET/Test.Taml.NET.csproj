@@ -27,6 +27,9 @@
 		<None Update="GivenChildArrays\childarrays.taml">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
+		<None Update="GivenComplexChildDocument\sample2.taml">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 		<None Update="GivenComplexChildDocument\sample1.taml">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
