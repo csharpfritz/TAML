@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
+		<TargetFramework>net5.0</TargetFramework>
 		<PackageId>TAML</PackageId>
-		<Version>0.2.0</Version>
+		<Version>0.3.0</Version>
 		<Authors>Jeffrey T. Fritz and Friends</Authors>
 		<Company />
 		<Product></Product>
@@ -13,7 +13,11 @@
 		<PackageProjectUrl>https://github.com/csharpfritz/TAML</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/csharpfritz/TAML</RepositoryUrl>
 		<RepositoryType>GitHub</RepositoryType>
-		<PackageReleaseNotes>0.2 - First package release with basic parser</PackageReleaseNotes>
+		<PackageReleaseNotes>
+				0.3 - Migrated to .NET 5 and added support for specification 1.1
+				<br/>
+				0.2 - First package release with basic parser
+		</PackageReleaseNotes>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,11 +14,14 @@ namespace TAML
 		private static readonly Regex _KeyValuePair = new Regex(@"(?<key>\S[^\t]*)\t+(?<value>\S[^\t]*)");
 		private static readonly Regex _SingleValue = new Regex(@"^\t*\S[^\t]*\t*$");
 
+		/// <summary>
+		/// The maximum TAML specification version supported by this parser
+		/// </summary>
+		/// <returns></returns>
+		public static Version SupportedSpecVersion => new Version(1,1); 
+
 		public static TamlDocument Parse(StreamReader reader)
 		{
-			//return ParseNonRecursive(reader);
-			//var (_, parsedDocument) = ParseRecursive(0, reader); // We start parsing at the root (=0) level
-			//return (TamlDocument)parsedDocument!;
 
 			var lines = ReadLines(reader);
 
@@ -34,8 +37,6 @@ namespace TAML
 				var (indent, tamlValue) = lines[i];
 
 				var tamlKeyValuePair = tamlValue as TamlKeyValuePair;
-
-
 
 				if (indent == 0)
 				{
@@ -85,6 +86,10 @@ namespace TAML
 			while (!reader.EndOfStream)
 			{
 				var rawLine = reader.ReadLine();
+
+				// Handle comments - ignore and read next line
+				if (rawLine?[0] == '#') continue;
+
 				var indent = CountIntendedTabs(rawLine);
 				var line = rawLine.Trim();
 				TamlKeyValuePair? value = null;
