@@ -34,8 +34,9 @@ This project is designed to be built and run primarily with Visual Studio 2019. 
 /docs                                  -- User Documentation
 /src                                   -- TAML Parsers
   /dotnet
-    /Taml.NET                          -- DotNet Parser
-    /Test.Taml.NET                     -- Unit tests
+    /Taml.NET
+      /Taml.NET                        -- DotNet Parser
+      /Test.Taml.NET                   -- Unit tests
   /python
     /src
       /pytaml                          -- Python Parser
