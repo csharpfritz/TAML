@@ -12,9 +12,11 @@ namespace TAML
 
 		public TamlValue? Value { get; set; }
 
+		public bool HasValue => Value != null;
+
 		public override string ToString()
 		{
-			return $"{Key}: {Value?.ToString()}";
+			return HasValue ? $"{Key}: {Value}" : Key;
 		}
 
 		public static implicit operator string(TamlKeyValuePair value)
