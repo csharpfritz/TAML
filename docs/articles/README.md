@@ -36,6 +36,7 @@ key			!""
 arrayKey
 	![]
 
+# This is an array with one empty value
 myArray
 	!""
 ```
