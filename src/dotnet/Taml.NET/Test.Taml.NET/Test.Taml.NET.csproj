@@ -51,6 +51,12 @@
 		<None Update="Spec_1-1\GivenComments\simple.taml">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
+		<None Update="Spec_1-1\GivenParserDirectives\singleTerm.taml">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Spec_1-1\GivenParserDirectives\simple.taml">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 
 

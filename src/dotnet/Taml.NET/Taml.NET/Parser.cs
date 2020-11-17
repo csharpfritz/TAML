@@ -20,9 +20,11 @@ namespace TAML
 		public static TamlDocument Parse(StreamReader reader)
 		{
 
-			var lines = ReadLines(reader);
+			var parsedDoc = ReadLines(reader);
+			var lines = parsedDoc.Lines;
 
 			var document = new TamlDocument();
+			document.ProcessorDirectives = parsedDoc.ProcessorDirectives;
 
 			int currentLevel = 0;
 
@@ -94,8 +96,10 @@ namespace TAML
 			return currentPair.HasValue && !string.IsNullOrEmpty(currentPair.Value) ? currentPair : new TamlKeyValuePair(currentPair!.Key, null);
 		}
 
-		private static Dictionary<int, (int indent, TamlKeyValuePair value)> ReadLines(StreamReader reader)
+		private static ParsedDocument ReadLines(StreamReader reader)
 		{
+
+			var directives = new List<TamlKeyValuePair>();
 			var lines = new Dictionary<int, (int indent, TamlKeyValuePair value)>();
 			int currentLineNumber = 0;
 
@@ -128,10 +132,21 @@ namespace TAML
 					// this is a single value
 					value = new TamlKeyValuePair(line, null);
 				}
-				lines.Add(currentLineNumber, (indent, value));
-				currentLineNumber++;
+
+				if (rawLine?[0] == '!') // This is a processor directive
+				{
+					value.Key = value.Key.TrimStart('!', ' ');
+					directives.Add(value);
+				}
+				else
+				{
+					lines.Add(currentLineNumber, (indent, value));
+					currentLineNumber++;
+				}
 			}
-			return lines;
+
+			return new ParsedDocument(lines, directives);
+
 		}
 	}
 }
