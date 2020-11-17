@@ -1,85 +1,93 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
 namespace TAML
 {
-
 	public class Parser
 	{
-
 		private static readonly Regex _KeyValuePair = new Regex(@"(?<key>\S[^\t]*)\t+(?<value>\S[^\t]*)");
 		private static readonly Regex _SingleValue = new Regex(@"^\t*\S[^\t]*\t*$");
 
 		public static TamlDocument Parse(StreamReader reader)
 		{
-			//return ParseNonRecursive(reader);
-			//var (_, parsedDocument) = ParseRecursive(0, reader); // We start parsing at the root (=0) level
-			//return (TamlDocument)parsedDocument!;
-
 			var lines = ReadLines(reader);
 
 			var document = new TamlDocument();
 
 			int currentLevel = 0;
 
-			TamlKeyValuePair? parent = null;
+			var stack = new Stack<TamlKeyValuePair>();
 
 			for (var i = 0; i < lines.Count; i++)
 			{
-
-				var (indent, tamlValue) = lines[i];
-
-				var tamlKeyValuePair = tamlValue as TamlKeyValuePair;
-
-
+				var (indent, currentPair) = lines[i];
 
 				if (indent == 0)
 				{
 					// line is root element
-					document.KeyValuePairs.Add(tamlKeyValuePair!);
+					document.KeyValuePairs.Add(currentPair!);
 					currentLevel = 0;
+					continue;
 				}
-				else if (indent > currentLevel)
+
+				if (indent > currentLevel)
 				{
-					// belongs to the parrent
-
-					parent = lines[i - 1].value as TamlKeyValuePair;
-
-					if (parent!.Value is null)
-					{
-						var newValue = new TamlArray();
-						newValue.AppendValue(new TamlValue(tamlKeyValuePair!.Key));
-						parent.Value = newValue;
-						currentLevel = indent;
-					}
+					stack.Push(lines[i - 1].value);
 				}
 				else if (indent < currentLevel)
 				{
-					// we have to go one indent level up
-					currentLevel = indent;
-					i--;
+					stack.Pop();
 				}
-				else if (indent == currentLevel && parent != null && parent.Value is TamlArray parrentArray)
+
+				TamlKeyValuePair? parent = stack.Count > 0 ? stack.Peek() : null;
+
+				if (indent > currentLevel)
 				{
-					parrentArray.AppendValue(new TamlValue(tamlKeyValuePair!.Key));
+					if (parent!.Value is null)
+					{
+						var newArray = new TamlArray();
+						newArray.AppendValue(currentPair);
+						parent.Value = newArray;
+					}
 				}
+				else if (parent != null && parent.Value is TamlArray parentArray)
+				{
+					parentArray.AppendValue(currentPair);
+				}
+
+				currentLevel = indent;
 			}
 			return document;
 		}
 
-		public static TamlDocument ParseFile(string fileName) {
-
+		public static TamlDocument ParseFile(string fileName)
+		{
 			var sr = new StreamReader(fileName);
 			return Parse(sr);
-
 		}
-		private static Dictionary<int, (int indent, TamlValue value)> ReadLines(StreamReader reader)
+
+		private static int CountIntendedTabs(string currentLine)
 		{
-			var lines = new Dictionary<int, (int indent, TamlValue value)>();
+			int tabs = 0;
+
+			while (currentLine[tabs] == '\t')
+			{
+				tabs++;
+			}
+
+			return tabs;
+		}
+
+		private static TamlValue GetPairIfNoValue(TamlKeyValuePair currentPair)
+		{
+			return currentPair.HasValue && !string.IsNullOrEmpty(currentPair.Value) ? currentPair : new TamlKeyValuePair(currentPair!.Key, null);
+		}
+
+		private static Dictionary<int, (int indent, TamlKeyValuePair value)> ReadLines(StreamReader reader)
+		{
+			var lines = new Dictionary<int, (int indent, TamlKeyValuePair value)>();
 			int currentLineNumber = 0;
 
 			while (!reader.EndOfStream)
@@ -111,18 +119,6 @@ namespace TAML
 				currentLineNumber++;
 			}
 			return lines;
-		}
-
-		private static int CountIntendedTabs(string currentLine)
-		{
-			int tabs = 0;
-
-			while (currentLine[tabs] == '\t')
-			{
-				tabs++;
-			}
-
-			return tabs;
 		}
 	}
 }
