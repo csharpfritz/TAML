@@ -1,3 +1,309 @@
 ### YamlMime:XRefMap
 sorted: true
-references: []
+references:
+- uid: TAML
+  name: TAML
+  href: api-dotnet/TAML.html
+  commentId: N:TAML
+  fullName: TAML
+  nameWithType: TAML
+- uid: TAML.Parser
+  name: Parser
+  href: api-dotnet/TAML.Parser.html
+  commentId: T:TAML.Parser
+  fullName: TAML.Parser
+  nameWithType: Parser
+- uid: TAML.Parser.Parse(StreamReader)
+  name: Parse(StreamReader)
+  href: api-dotnet/TAML.Parser.html#TAML_Parser_Parse_StreamReader_
+  commentId: M:TAML.Parser.Parse(StreamReader)
+  fullName: TAML.Parser.Parse(StreamReader)
+  nameWithType: Parser.Parse(StreamReader)
+- uid: TAML.Parser.Parse*
+  name: Parse
+  href: api-dotnet/TAML.Parser.html#TAML_Parser_Parse_
+  commentId: Overload:TAML.Parser.Parse
+  isSpec: "True"
+  fullName: TAML.Parser.Parse
+  nameWithType: Parser.Parse
+- uid: TAML.Parser.SupportedSpecVersion
+  name: SupportedSpecVersion
+  href: api-dotnet/TAML.Parser.html#TAML_Parser_SupportedSpecVersion
+  commentId: P:TAML.Parser.SupportedSpecVersion
+  fullName: TAML.Parser.SupportedSpecVersion
+  nameWithType: Parser.SupportedSpecVersion
+- uid: TAML.Parser.SupportedSpecVersion*
+  name: SupportedSpecVersion
+  href: api-dotnet/TAML.Parser.html#TAML_Parser_SupportedSpecVersion_
+  commentId: Overload:TAML.Parser.SupportedSpecVersion
+  isSpec: "True"
+  fullName: TAML.Parser.SupportedSpecVersion
+  nameWithType: Parser.SupportedSpecVersion
+- uid: TAML.TamlArray
+  name: TamlArray
+  href: api-dotnet/TAML.TamlArray.html
+  commentId: T:TAML.TamlArray
+  fullName: TAML.TamlArray
+  nameWithType: TamlArray
+- uid: TAML.TamlArray.GetEnumerator
+  name: GetEnumerator()
+  href: api-dotnet/TAML.TamlArray.html#TAML_TamlArray_GetEnumerator
+  commentId: M:TAML.TamlArray.GetEnumerator
+  fullName: TAML.TamlArray.GetEnumerator()
+  nameWithType: TamlArray.GetEnumerator()
+- uid: TAML.TamlArray.GetEnumerator*
+  name: GetEnumerator
+  href: api-dotnet/TAML.TamlArray.html#TAML_TamlArray_GetEnumerator_
+  commentId: Overload:TAML.TamlArray.GetEnumerator
+  isSpec: "True"
+  fullName: TAML.TamlArray.GetEnumerator
+  nameWithType: TamlArray.GetEnumerator
+- uid: TAML.TamlArray.Item(System.Int32)
+  name: Item[Int32]
+  href: api-dotnet/TAML.TamlArray.html#TAML_TamlArray_Item_System_Int32_
+  commentId: P:TAML.TamlArray.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: TAML.TamlArray.Item[System.Int32]
+  fullName.vb: TAML.TamlArray.Item(System.Int32)
+  nameWithType: TamlArray.Item[Int32]
+  nameWithType.vb: TamlArray.Item(Int32)
+- uid: TAML.TamlArray.Item*
+  name: Item
+  href: api-dotnet/TAML.TamlArray.html#TAML_TamlArray_Item_
+  commentId: Overload:TAML.TamlArray.Item
+  isSpec: "True"
+  fullName: TAML.TamlArray.Item
+  nameWithType: TamlArray.Item
+- uid: TAML.TamlArray.ToString
+  name: ToString()
+  href: api-dotnet/TAML.TamlArray.html#TAML_TamlArray_ToString
+  commentId: M:TAML.TamlArray.ToString
+  fullName: TAML.TamlArray.ToString()
+  nameWithType: TamlArray.ToString()
+- uid: TAML.TamlArray.ToString*
+  name: ToString
+  href: api-dotnet/TAML.TamlArray.html#TAML_TamlArray_ToString_
+  commentId: Overload:TAML.TamlArray.ToString
+  isSpec: "True"
+  fullName: TAML.TamlArray.ToString
+  nameWithType: TamlArray.ToString
+- uid: TAML.TamlDocument
+  name: TamlDocument
+  href: api-dotnet/TAML.TamlDocument.html
+  commentId: T:TAML.TamlDocument
+  fullName: TAML.TamlDocument
+  nameWithType: TamlDocument
+- uid: TAML.TamlDocument.KeyValuePairs
+  name: KeyValuePairs
+  href: api-dotnet/TAML.TamlDocument.html#TAML_TamlDocument_KeyValuePairs
+  commentId: P:TAML.TamlDocument.KeyValuePairs
+  fullName: TAML.TamlDocument.KeyValuePairs
+  nameWithType: TamlDocument.KeyValuePairs
+- uid: TAML.TamlDocument.KeyValuePairs*
+  name: KeyValuePairs
+  href: api-dotnet/TAML.TamlDocument.html#TAML_TamlDocument_KeyValuePairs_
+  commentId: Overload:TAML.TamlDocument.KeyValuePairs
+  isSpec: "True"
+  fullName: TAML.TamlDocument.KeyValuePairs
+  nameWithType: TamlDocument.KeyValuePairs
+- uid: TAML.TamlDocument.ProcessorDirectives
+  name: ProcessorDirectives
+  href: api-dotnet/TAML.TamlDocument.html#TAML_TamlDocument_ProcessorDirectives
+  commentId: P:TAML.TamlDocument.ProcessorDirectives
+  fullName: TAML.TamlDocument.ProcessorDirectives
+  nameWithType: TamlDocument.ProcessorDirectives
+- uid: TAML.TamlDocument.ProcessorDirectives*
+  name: ProcessorDirectives
+  href: api-dotnet/TAML.TamlDocument.html#TAML_TamlDocument_ProcessorDirectives_
+  commentId: Overload:TAML.TamlDocument.ProcessorDirectives
+  isSpec: "True"
+  fullName: TAML.TamlDocument.ProcessorDirectives
+  nameWithType: TamlDocument.ProcessorDirectives
+- uid: TAML.TamlExtensionMethods
+  name: TamlExtensionMethods
+  href: api-dotnet/TAML.TamlExtensionMethods.html
+  commentId: T:TAML.TamlExtensionMethods
+  fullName: TAML.TamlExtensionMethods
+  nameWithType: TamlExtensionMethods
+- uid: TAML.TamlExtensionMethods.Add(IList{TAML.TamlKeyValuePair},System.String,TAML.TamlValue)
+  name: Add(IList<TamlKeyValuePair>, String, TamlValue)
+  href: api-dotnet/TAML.TamlExtensionMethods.html#TAML_TamlExtensionMethods_Add_IList_TAML_TamlKeyValuePair__System_String_TAML_TamlValue_
+  commentId: M:TAML.TamlExtensionMethods.Add(IList{TAML.TamlKeyValuePair},System.String,TAML.TamlValue)
+  name.vb: Add(IList(Of TamlKeyValuePair), String, TamlValue)
+  fullName: TAML.TamlExtensionMethods.Add(IList<TAML.TamlKeyValuePair>, System.String, TAML.TamlValue)
+  fullName.vb: TAML.TamlExtensionMethods.Add(IList(Of TAML.TamlKeyValuePair), System.String, TAML.TamlValue)
+  nameWithType: TamlExtensionMethods.Add(IList<TamlKeyValuePair>, String, TamlValue)
+  nameWithType.vb: TamlExtensionMethods.Add(IList(Of TamlKeyValuePair), String, TamlValue)
+- uid: TAML.TamlExtensionMethods.Add*
+  name: Add
+  href: api-dotnet/TAML.TamlExtensionMethods.html#TAML_TamlExtensionMethods_Add_
+  commentId: Overload:TAML.TamlExtensionMethods.Add
+  isSpec: "True"
+  fullName: TAML.TamlExtensionMethods.Add
+  nameWithType: TamlExtensionMethods.Add
+- uid: TAML.TamlExtensionMethods.FindByKey(IList{TAML.TamlKeyValuePair},System.String)
+  name: FindByKey(IList<TamlKeyValuePair>, String)
+  href: api-dotnet/TAML.TamlExtensionMethods.html#TAML_TamlExtensionMethods_FindByKey_IList_TAML_TamlKeyValuePair__System_String_
+  commentId: M:TAML.TamlExtensionMethods.FindByKey(IList{TAML.TamlKeyValuePair},System.String)
+  name.vb: FindByKey(IList(Of TamlKeyValuePair), String)
+  fullName: TAML.TamlExtensionMethods.FindByKey(IList<TAML.TamlKeyValuePair>, System.String)
+  fullName.vb: TAML.TamlExtensionMethods.FindByKey(IList(Of TAML.TamlKeyValuePair), System.String)
+  nameWithType: TamlExtensionMethods.FindByKey(IList<TamlKeyValuePair>, String)
+  nameWithType.vb: TamlExtensionMethods.FindByKey(IList(Of TamlKeyValuePair), String)
+- uid: TAML.TamlExtensionMethods.FindByKey*
+  name: FindByKey
+  href: api-dotnet/TAML.TamlExtensionMethods.html#TAML_TamlExtensionMethods_FindByKey_
+  commentId: Overload:TAML.TamlExtensionMethods.FindByKey
+  isSpec: "True"
+  fullName: TAML.TamlExtensionMethods.FindByKey
+  nameWithType: TamlExtensionMethods.FindByKey
+- uid: TAML.TamlKeyValuePair
+  name: TamlKeyValuePair
+  href: api-dotnet/TAML.TamlKeyValuePair.html
+  commentId: T:TAML.TamlKeyValuePair
+  fullName: TAML.TamlKeyValuePair
+  nameWithType: TamlKeyValuePair
+- uid: TAML.TamlKeyValuePair.#ctor(System.String,System.Nullable{TAML.TamlValue})
+  name: TamlKeyValuePair(String, Nullable<TamlValue>)
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair__ctor_System_String_System_Nullable_TAML_TamlValue__
+  commentId: M:TAML.TamlKeyValuePair.#ctor(System.String,System.Nullable{TAML.TamlValue})
+  name.vb: TamlKeyValuePair(String, Nullable(Of TamlValue))
+  fullName: TAML.TamlKeyValuePair.TamlKeyValuePair(System.String, System.Nullable<TAML.TamlValue>)
+  fullName.vb: TAML.TamlKeyValuePair.TamlKeyValuePair(System.String, System.Nullable(Of TAML.TamlValue))
+  nameWithType: TamlKeyValuePair.TamlKeyValuePair(String, Nullable<TamlValue>)
+  nameWithType.vb: TamlKeyValuePair.TamlKeyValuePair(String, Nullable(Of TamlValue))
+- uid: TAML.TamlKeyValuePair.#ctor*
+  name: TamlKeyValuePair
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair__ctor_
+  commentId: Overload:TAML.TamlKeyValuePair.#ctor
+  isSpec: "True"
+  fullName: TAML.TamlKeyValuePair.TamlKeyValuePair
+  nameWithType: TamlKeyValuePair.TamlKeyValuePair
+- uid: TAML.TamlKeyValuePair.HasValue
+  name: HasValue
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_HasValue
+  commentId: P:TAML.TamlKeyValuePair.HasValue
+  fullName: TAML.TamlKeyValuePair.HasValue
+  nameWithType: TamlKeyValuePair.HasValue
+- uid: TAML.TamlKeyValuePair.HasValue*
+  name: HasValue
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_HasValue_
+  commentId: Overload:TAML.TamlKeyValuePair.HasValue
+  isSpec: "True"
+  fullName: TAML.TamlKeyValuePair.HasValue
+  nameWithType: TamlKeyValuePair.HasValue
+- uid: TAML.TamlKeyValuePair.Key
+  name: Key
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_Key
+  commentId: P:TAML.TamlKeyValuePair.Key
+  fullName: TAML.TamlKeyValuePair.Key
+  nameWithType: TamlKeyValuePair.Key
+- uid: TAML.TamlKeyValuePair.Key*
+  name: Key
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_Key_
+  commentId: Overload:TAML.TamlKeyValuePair.Key
+  isSpec: "True"
+  fullName: TAML.TamlKeyValuePair.Key
+  nameWithType: TamlKeyValuePair.Key
+- uid: TAML.TamlKeyValuePair.op_Implicit(TAML.TamlKeyValuePair)~System.String
+  name: Implicit(TamlKeyValuePair to String)
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_op_Implicit_TAML_TamlKeyValuePair__System_String
+  commentId: M:TAML.TamlKeyValuePair.op_Implicit(TAML.TamlKeyValuePair)~System.String
+  name.vb: Widening(TamlKeyValuePair to String)
+  fullName: TAML.TamlKeyValuePair.Implicit(TAML.TamlKeyValuePair to System.String)
+  fullName.vb: TAML.TamlKeyValuePair.Widening(TAML.TamlKeyValuePair to System.String)
+  nameWithType: TamlKeyValuePair.Implicit(TamlKeyValuePair to String)
+  nameWithType.vb: TamlKeyValuePair.Widening(TamlKeyValuePair to String)
+- uid: TAML.TamlKeyValuePair.op_Implicit*
+  name: Implicit
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_op_Implicit_
+  commentId: Overload:TAML.TamlKeyValuePair.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: TAML.TamlKeyValuePair.Implicit
+  fullName.vb: TAML.TamlKeyValuePair.Widening
+  nameWithType: TamlKeyValuePair.Implicit
+  nameWithType.vb: TamlKeyValuePair.Widening
+- uid: TAML.TamlKeyValuePair.ToString
+  name: ToString()
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_ToString
+  commentId: M:TAML.TamlKeyValuePair.ToString
+  fullName: TAML.TamlKeyValuePair.ToString()
+  nameWithType: TamlKeyValuePair.ToString()
+- uid: TAML.TamlKeyValuePair.ToString*
+  name: ToString
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_ToString_
+  commentId: Overload:TAML.TamlKeyValuePair.ToString
+  isSpec: "True"
+  fullName: TAML.TamlKeyValuePair.ToString
+  nameWithType: TamlKeyValuePair.ToString
+- uid: TAML.TamlKeyValuePair.Value
+  name: Value
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_Value
+  commentId: P:TAML.TamlKeyValuePair.Value
+  fullName: TAML.TamlKeyValuePair.Value
+  nameWithType: TamlKeyValuePair.Value
+- uid: TAML.TamlKeyValuePair.Value*
+  name: Value
+  href: api-dotnet/TAML.TamlKeyValuePair.html#TAML_TamlKeyValuePair_Value_
+  commentId: Overload:TAML.TamlKeyValuePair.Value
+  isSpec: "True"
+  fullName: TAML.TamlKeyValuePair.Value
+  nameWithType: TamlKeyValuePair.Value
+- uid: TAML.TamlValue
+  name: TamlValue
+  href: api-dotnet/TAML.TamlValue.html
+  commentId: T:TAML.TamlValue
+  fullName: TAML.TamlValue
+  nameWithType: TamlValue
+- uid: TAML.TamlValue.#ctor
+  name: TamlValue()
+  href: api-dotnet/TAML.TamlValue.html#TAML_TamlValue__ctor
+  commentId: M:TAML.TamlValue.#ctor
+  fullName: TAML.TamlValue.TamlValue()
+  nameWithType: TamlValue.TamlValue()
+- uid: TAML.TamlValue.#ctor(System.String)
+  name: TamlValue(String)
+  href: api-dotnet/TAML.TamlValue.html#TAML_TamlValue__ctor_System_String_
+  commentId: M:TAML.TamlValue.#ctor(System.String)
+  fullName: TAML.TamlValue.TamlValue(System.String)
+  nameWithType: TamlValue.TamlValue(String)
+- uid: TAML.TamlValue.#ctor*
+  name: TamlValue
+  href: api-dotnet/TAML.TamlValue.html#TAML_TamlValue__ctor_
+  commentId: Overload:TAML.TamlValue.#ctor
+  isSpec: "True"
+  fullName: TAML.TamlValue.TamlValue
+  nameWithType: TamlValue.TamlValue
+- uid: TAML.TamlValue.op_Implicit(System.Nullable{TAML.TamlValue})~System.String
+  name: Implicit(Nullable<TamlValue> to String)
+  href: api-dotnet/TAML.TamlValue.html#TAML_TamlValue_op_Implicit_System_Nullable_TAML_TamlValue___System_String
+  commentId: M:TAML.TamlValue.op_Implicit(System.Nullable{TAML.TamlValue})~System.String
+  name.vb: Widening(Nullable(Of TamlValue) to String)
+  fullName: TAML.TamlValue.Implicit(System.Nullable<TAML.TamlValue> to System.String)
+  fullName.vb: TAML.TamlValue.Widening(System.Nullable(Of TAML.TamlValue) to System.String)
+  nameWithType: TamlValue.Implicit(Nullable<TamlValue> to String)
+  nameWithType.vb: TamlValue.Widening(Nullable(Of TamlValue) to String)
+- uid: TAML.TamlValue.op_Implicit*
+  name: Implicit
+  href: api-dotnet/TAML.TamlValue.html#TAML_TamlValue_op_Implicit_
+  commentId: Overload:TAML.TamlValue.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: TAML.TamlValue.Implicit
+  fullName.vb: TAML.TamlValue.Widening
+  nameWithType: TamlValue.Implicit
+  nameWithType.vb: TamlValue.Widening
+- uid: TAML.TamlValue.ToString
+  name: ToString()
+  href: api-dotnet/TAML.TamlValue.html#TAML_TamlValue_ToString
+  commentId: M:TAML.TamlValue.ToString
+  fullName: TAML.TamlValue.ToString()
+  nameWithType: TamlValue.ToString()
+- uid: TAML.TamlValue.ToString*
+  name: ToString
+  href: api-dotnet/TAML.TamlValue.html#TAML_TamlValue_ToString_
+  commentId: Overload:TAML.TamlValue.ToString
+  isSpec: "True"
+  fullName: TAML.TamlValue.ToString
+  nameWithType: TamlValue.ToString

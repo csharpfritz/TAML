@@ -25,6 +25,114 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.Parser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.Parser.html",
+          "hash": "tAxTjsrLz9QAQE4zaTn+fQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlArray.html",
+          "hash": "O5S5cAEBym+vrQtZOAWG0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlDocument.html",
+          "hash": "KC+W+HRSjZQkd+2h36+FnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlExtensionMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlExtensionMethods.html",
+          "hash": "YLn5XAL+w5uQLgfeUOhRcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlKeyValuePair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlKeyValuePair.html",
+          "hash": "kBIRo53BGy/KB/CY1/PPbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlValue.html",
+          "hash": "jzAo6WefjoqWM7oO1gtA5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.html",
+          "hash": "1hCMZ5NvKgTuwOPORbeUZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api-dotnet/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/index.html",
+          "hash": "/1RhQyiwRbQM29SpGHadkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api-dotnet/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/toc.html",
+          "hash": "jGZEDjYi2m3KtuiIhUgHsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/README.md",
       "output": {
@@ -160,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "eidipDkh4gQgkcABI3X3OQ=="
+          "hash": "90SdExe/zybJjg1a1ryAFQ=="
         }
       },
       "is_incremental": false,
@@ -178,9 +286,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -188,12 +296,18 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 9,
+          "total_file_count": 10,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 7,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
