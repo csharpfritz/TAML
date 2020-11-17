@@ -3,7 +3,7 @@
 		{
 			"src": [
 				{
-					"files": [ "**.csproj" ],
+					"files": [ "Taml.NET/Taml.NET/Taml.NET.csproj" ],
 					"exclude": [ "**/bin/**", "**/obj/**" ],
 					"src": "../src/dotnet"
 				}
