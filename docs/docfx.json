@@ -1,10 +1,24 @@
 {
+	"metadata": [
+		{
+			"src": [
+				{
+					"files": [ "**.csproj" ],
+					"exclude": [ "**/bin/**", "**/obj/**" ],
+					"src": "../src/dotnet"
+				}
+			],
+			"dest": "api-dotnet",
+			"disableGitFeatures": false,
+			"disableDefaultFilter": false
+		}
+	],
 	"build": {
 		"content": [
 			{
 				"files": [
-					"api/**.yml",
-					"api/index.md"
+					"api-dotnet/**.yml",
+					"api-dotnet/index.md"
 				]
 			},
 			{
