@@ -2,9 +2,9 @@ name: .NET Core
 
 on:
   push:
-    paths: parsers/dotnet/**
+    paths: src/dotnet/**
   pull_request:
-    paths: parsers/dotnet/**
+    paths: src/dotnet/**
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: parsers/dotnet
+        working-directory: src/dotnet
 
     steps:
       - uses: actions/checkout@v2
