@@ -4,7 +4,9 @@ namespace TAML
 	{
 		private readonly string _Value = string.Empty;
 
-		protected TamlValue() { }
+		protected TamlValue()
+		{
+		}
 
 		public TamlValue(string value)
 		{
@@ -16,13 +18,9 @@ namespace TAML
 			return _Value;
 		}
 
-		public static implicit operator string(TamlValue value)
+		public static implicit operator string(TamlValue? value)
 		{
-
-			return value.ToString();
-
+			return value?.ToString() ?? string.Empty;
 		}
-
 	}
-
 }

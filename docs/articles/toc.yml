@@ -2,3 +2,5 @@
   href: README.md
 - name: Interpreters
   href: interpreters/toc.yml
+- name: Test Suite
+  href: test_suite.md

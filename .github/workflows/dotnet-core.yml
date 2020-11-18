@@ -2,28 +2,27 @@ name: .NET Core
 
 on:
   push:
-    paths: parsers/dotnet/**
+    paths: src/dotnet/**
   pull_request:
-    paths: parsers/dotnet/**
+    paths: src/dotnet/**
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
+
     defaults:
       run:
-        working-directory: parsers/dotnet
+        working-directory: src/dotnet
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.301
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.301
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
