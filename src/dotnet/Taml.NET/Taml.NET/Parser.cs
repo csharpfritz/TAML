@@ -6,6 +6,10 @@ using System.Text.RegularExpressions;
 
 namespace TAML
 {
+
+	/// <summary>
+	/// Read, interpret, and convert TAML to elements that can be coded against
+	/// </summary>
 	public class Parser
 	{
 		private static readonly Regex _KeyValuePair = new Regex(@"(?<key>\S[^\t]*)\t+(?<value>\S[^\t]*)");
@@ -17,6 +21,11 @@ namespace TAML
 		/// <returns></returns>
 		public static Version SupportedSpecVersion => new Version(1,1); 
 
+		/// <summary>
+		/// Convert the TAML submitted into a TamlDocument that can be navigated
+		/// </summary>
+		/// <param name="reader">A StreamReader containing referencing the TAML content to be parsed</param>
+		/// <returns>A TamlDocument that represents the string TAML document</returns>
 		public static TamlDocument Parse(StreamReader reader)
 		{
 
