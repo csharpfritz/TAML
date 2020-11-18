@@ -82,6 +82,6 @@ We are always looking for help on this project.  There are several ways that you
 
 We are always looking for help to add content to the `/docs` section of the repository with proper links back through to the main `/README.md`.
 
-### Recources
+### Resources
 
 [cmjchrisjones Blog: Contributing To Someone else's git repository](https://cmjchrisjones.dev/posts/contributing-to-someone-elses-git-repository/)
