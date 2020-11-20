@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 using System.IO;
-using Configuraiton.Taml.NET;
+using Configuration.Taml.NET;
 using Microsoft.Extensions.Configuration;
 using Xunit;
 

@@ -20,7 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Configuraiton.Taml.NET\Configuraiton.Taml.NET.csproj" />
+		<ProjectReference Include="..\Configuration.Taml.NET\Configuration.Taml.NET.csproj" />
 	</ItemGroup>
 
 </Project>

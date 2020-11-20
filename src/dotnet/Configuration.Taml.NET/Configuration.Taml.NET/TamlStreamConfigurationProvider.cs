@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Configuraiton.Taml.NET
+namespace Configuration.Taml.NET
 {
 	/// <summary>
 	/// Loads configuration key/values from a Taml stream into a provider.

@@ -3,7 +3,7 @@ using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
 
-namespace Configuraiton.Taml.NET
+namespace Configuration.Taml.NET
 {
 	/// <summary>
 	/// Extension methods for adding <see cref="TamlConfigurationProvider"/>.

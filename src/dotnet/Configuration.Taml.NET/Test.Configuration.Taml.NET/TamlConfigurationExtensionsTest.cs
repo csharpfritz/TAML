@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using Configuraiton.Taml.NET;
+using Configuration.Taml.NET;
 using Microsoft.Extensions.Configuration;
 using Xunit;
 

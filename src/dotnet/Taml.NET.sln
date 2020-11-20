@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuraiton.Taml.NET", "Configuration.Taml.NET\Configuraiton.Taml.NET\Configuraiton.Taml.NET.csproj", "{069403C6-DE0A-4043-8D92-88DADE3DB3E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration.Taml.NET", "Configuration.Taml.NET\Configuration.Taml.NET\Configuration.Taml.NET.csproj", "{069403C6-DE0A-4043-8D92-88DADE3DB3E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Configuration.Taml.NET", "Configuration.Taml.NET\Test.Configuration.Taml.NET\Test.Configuration.Taml.NET.csproj", "{2CF41FAB-4607-4772-8544-8D2EF8FF9DB8}"
 EndProject

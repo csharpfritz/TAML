@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Configuraiton.Taml.NET
+namespace Configuration.Taml.NET
 {
 	/// <summary>
 	/// A Taml file based <see cref="FileConfigurationProvider"/>.

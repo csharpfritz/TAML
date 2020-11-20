@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.Extensions.Configuration;
 using TAML;
 
-namespace Configuraiton.Taml.NET
+namespace Configuration.Taml.NET
 {
 	internal class TamlConfigurationFileParser
 	{

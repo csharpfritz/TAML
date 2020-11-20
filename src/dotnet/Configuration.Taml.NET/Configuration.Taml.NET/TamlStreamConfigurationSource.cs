@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace Configuraiton.Taml.NET
+namespace Configuration.Taml.NET
 {
 	/// <summary>
 	/// Represents a Taml file as an <see cref="IConfigurationSource"/>.
