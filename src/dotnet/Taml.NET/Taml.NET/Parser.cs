@@ -82,6 +82,11 @@ namespace TAML
 			return document;
 		}
 
+		/// <summary>
+		/// Convert the file submitted into a TamlDocument
+		/// </summary>
+		/// <param name="fileName">The file to parse</param>
+		/// <returns>TamlDocument loaded with the content of the file submitted</returns>
 		public static TamlDocument ParseFile(string fileName)
 		{
 			var sr = new StreamReader(fileName);
