@@ -1,26 +1,30 @@
 namespace TAML
 {
-	public class TamlValue
-	{
-		private readonly string _Value = string.Empty;
 
-		protected TamlValue()
-		{
-		}
+  /// <summary>
+  /// Represents an entry in a TAML document
+  /// </summary>
+  public class TamlValue
+  {
+    private readonly string _Value = string.Empty;
 
-		public TamlValue(string value)
-		{
-			this._Value = value;
-		}
+    protected TamlValue()
+    {
+    }
 
-		public override string ToString()
-		{
-			return _Value;
-		}
+    public TamlValue(string value)
+    {
+      this._Value = value;
+    }
 
-		public static implicit operator string(TamlValue? value)
-		{
-			return value?.ToString() ?? string.Empty;
-		}
-	}
+    public override string ToString()
+    {
+      return _Value;
+    }
+
+    public static implicit operator string(TamlValue? value)
+    {
+      return value?.ToString() ?? string.Empty;
+    }
+  }
 }
