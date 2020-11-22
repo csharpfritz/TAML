@@ -1,0 +1,12 @@
+root1
+	key1		value1
+	key2		value2
+	key3
+		item1
+		item2
+	key4		value4
+root2
+	key41			value41
+	key42			value42
+	key43			value43
+	key44			value44
