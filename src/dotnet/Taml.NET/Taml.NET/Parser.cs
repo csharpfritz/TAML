@@ -26,7 +26,7 @@ namespace TAML
 		/// </summary>
 		/// <param name="reader">A StreamReader containing referencing the TAML content to be parsed</param>
 		/// <returns>A TamlDocument that represents the string TAML document</returns>
-		public static TamlDocument Parse(StreamReader reader)
+		public static TamlDocument Parse(TextReader reader)
 		{
 
 			var parsedDoc = ReadLines(reader);
@@ -110,14 +110,14 @@ namespace TAML
 			return currentPair.HasValue && !string.IsNullOrEmpty(currentPair.Value) ? currentPair : new TamlKeyValuePair(currentPair!.Key, null);
 		}
 
-		private static ParsedDocument ReadLines(StreamReader reader)
+		private static ParsedDocument ReadLines(TextReader reader)
 		{
 
 			var directives = new List<TamlKeyValuePair>();
 			var lines = new Dictionary<int, (int indent, TamlKeyValuePair value)>();
 			int currentLineNumber = 0;
 
-			while (!reader.EndOfStream)
+			while (reader.Peek() > 0)
 			{
 				var rawLine = reader.ReadLine();
 
