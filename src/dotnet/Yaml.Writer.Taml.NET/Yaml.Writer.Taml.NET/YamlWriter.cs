@@ -15,7 +15,7 @@ namespace TAML.Writer.Yaml
 			{
 				if (item.HasValue && item.Value != null)
 				{
-					WriteValue(indentCount, item.Value, yaml);
+					WriteKeyWithTamlValue(indentCount, item, yaml);
 				}
 			}
 
@@ -25,28 +25,34 @@ namespace TAML.Writer.Yaml
 
 		private static string Indent(int indentCount)
 		{
-			return "".PadLeft(indentCount);
+			return "".PadLeft(indentCount) + (indentCount > 0 ? "- " : "");
 		}
 
-		private static void WriteValue(int indentCount, TamlValue tamlValue, StringBuilder stringBuilder)
+		private static void WriteKeyWithTamlValue(int indentCount, TamlKeyValuePair tamlKvp, StringBuilder stringBuilder)
 		{
-			switch (tamlValue.GetType().Name)
+			var isTamlValue = tamlKvp.Value is TamlValue;
+			var isTamlArray = tamlKvp.Value is TamlArray;
+
+			if (isTamlArray && isTamlValue)
 			{
-				case "TamlArray":
-					var valueArray = (TamlArray)tamlValue;
-					stringBuilder.AppendLine($"{Indent(indentCount)}{tamlValue}:");
-					foreach (var value in valueArray)
-					{
-						WriteValue(indentCount + 2, value, stringBuilder);
-						stringBuilder.AppendLine($"{Indent(indentCount + 2)}- {value}");
-					}
+				stringBuilder.AppendLine($"{Indent(indentCount)}{tamlKvp.Key}:");
+			}
 
-					break;
-
-				case "TamlValue":
-					stringBuilder.AppendLine($"{Indent(indentCount)}{tamlValue}: {tamlValue}");
-
-					break;
+			if (isTamlArray && tamlKvp.HasValue && tamlKvp.Value != null)
+			{
+				var tva = (TamlArray)tamlKvp.Value;
+				foreach (var item in tva)
+				{
+					WriteKeyWithTamlValue(indentCount + 2, (TamlKeyValuePair)item, stringBuilder);
+				}
+			}
+			else if (isTamlValue)
+			{
+				stringBuilder.AppendLine($"{Indent(indentCount)}{tamlKvp.Key}: {tamlKvp.Value}");
+			}
+			else
+			{
+				stringBuilder.AppendLine($"{Indent(indentCount)}{ tamlKvp.Key}");
 			}
 		}
 	}

@@ -30,11 +30,12 @@ namespace Test.Yaml.Writer.Taml.NET.GivenComplexChildDocument
 		[Fact]
 		public void ShouldHaveCorrectNesting()
 		{
-			var expected = @"root:
+			var expected =
+@"root:
   - key1: value1
   - key2: value2
   - key3:
-  - item1
+    - item1
     - item2
     - item3
     - item4:

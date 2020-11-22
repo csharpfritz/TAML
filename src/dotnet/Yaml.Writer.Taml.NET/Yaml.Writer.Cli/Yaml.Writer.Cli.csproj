@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Taml.NET\Taml.NET\Taml.NET.csproj" />
+    <ProjectReference Include="..\Yaml.Writer.Taml.NET\Yaml.Writer.Taml.NET.csproj" />
+  </ItemGroup>
+
+</Project>
