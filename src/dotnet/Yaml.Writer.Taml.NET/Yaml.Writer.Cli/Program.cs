@@ -10,6 +10,7 @@ namespace Yaml.Writer.Cli
 		private static void Main(string[] args)
 		{
 			var filename = GetFileName(args);
+			Console.WriteLine($"Read file: {filename}");
 			var tamlDoc = Parser.Parse(new StreamReader(File.OpenRead(filename)));
 
 			var yaml = YamlWriter.Write(tamlDoc);
@@ -17,13 +18,17 @@ namespace Yaml.Writer.Cli
 			Console.WriteLine(yaml);
 		}
 
+		/// <Summary>
+		/// Find the first file with a `.taml` extension from the command line arguments.
+		/// If no such file exists then default to `sample1.taml`
+		/// </Summary>
 		private static string GetFileName(string[] args)
 		{
-			if (args.Length >= 1)
-			{
-				if (File.Exists(args[0]))
+			foreach(var arg in args){
+
+				if (arg.EndsWith("taml") && File.Exists(arg))
 				{
-					return args[0];
+					return arg;
 				}
 			}
 			return "sample1.taml";
