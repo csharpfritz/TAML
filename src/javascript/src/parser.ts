@@ -1,12 +1,25 @@
 import { TamlDocument } from "./TamlDocument";
+import { TamlKeyValuePair } from "./TamlKeyValuePair";
 
 export class Parser {
 
-	SupportedSpecVersion = "1.0";
+static _SingleValue = /^\t*\S[^\t]*\t*$/gi;
 
-	Parse(taml:string) : TamlDocument {
+	static SupportedSpecVersion = "1.0";
 
-		return new TamlDocument();
+	static Parse(taml:string) : TamlDocument {
+
+		var outDoc = new TamlDocument();
+		var lines = taml.split('\n');
+
+		for (const line of lines) {
+			if (TamlKeyValuePair.IsKeyValuePair(line)) {
+				var newPair = TamlKeyValuePair.fromString(line);
+				if (newPair != null) outDoc.KeyValuePairs.push(newPair);
+			}
+		}
+
+		return outDoc;
 		
 	}
 
