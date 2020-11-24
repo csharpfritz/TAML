@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "test": "mocha --reporter spec --require ts-node/register 'src/**/*.test.ts'"
+    "test": "mocha --reporter spec --require ts-node/register 'src/**/*.test.ts'",
+    "watchtest": "mocha --watch --watch-files src/**/* --reporter spec --require ts-node/register 'src/**/*.test.ts'"
   },
   "repository": {
     "type": "git",
