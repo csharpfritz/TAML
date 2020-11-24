@@ -19,7 +19,7 @@ static _SingleValue = /^\t*\S[^\t]*\t*$/gi;
 			}
 		}
 
-		console.log("I did a thing!");
+		console.log("I did a thing!  Boop!");
 
 		return outDoc;
 		
