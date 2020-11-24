@@ -19,6 +19,8 @@ static _SingleValue = /^\t*\S[^\t]*\t*$/gi;
 			}
 		}
 
+		console.log("I did a thing!");
+
 		return outDoc;
 		
 	}
