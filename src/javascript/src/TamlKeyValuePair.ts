@@ -38,7 +38,7 @@ export class TamlKeyValuePair implements ITamlValue {
 	public toString = () :string => {
 
 		return `${this.Key}: ${this.Value?.toString()}`;
-
+  
 	}
 
 }
