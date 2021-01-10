@@ -1,8 +1,8 @@
 {
-  "articles/interpreters/python.html": {
-    "href": "articles/interpreters/python.html",
-    "title": "python | TAML",
-    "keywords": "python Issue 3"
+  "articles/README.html": {
+    "href": "articles/README.html",
+    "title": "TAML | TAML",
+    "keywords": "TAML Specification Version 1.0 TAML attempts to provide a very simple message format that can be used for network communications or hierarchical configuration storage on disk. It is defined by these 5 simple rules: New entries are separated by carriage returns (CR / CRLF) Keys and values are separated by 1+ tab characters (\\t) Subkeys are defined on a line starting with 1+ tab characters (\\t) An array is a key with multiple child values Presence of space characters are illegal A test suite of documents is available at the root of the GitHub repository and more information is provided in the Test Suite documentation topic . Version 1.1 The 1.1 specification for TAML adds support for Processor Directives and comments in the file format. In keeping with the spirit of each line in a file is a distinct record, only single-line comments are supported and directives appear on a single line with a namespaced directive, at least one tab, and then the value assigned. # This is a TAML comment ! TAML.EmptyArraySupported FALSE Additionally, we introducing the ! escape character to help indicate empty values and empty arrays. Key value pairs without an associated value use !\"\" to indicate an empty string. Empty Arrays are indicated with a ![] on the same line as the array key. # This is a key with an empty value key !\"\" # This is an empty array defined by arrayKey arrayKey ![] # This is an array with one empty value myArray !\"\" Available Interpreters dotNET python Mockups of Well-Known Documents as TAML Package.JSON -- Node Package Format Appsettings.JSON -- .NET Configuration Format kubernetes configuration.yml workflow.yml -- GitHub Action specification in YAML"
   },
   "articles/test_suite.html": {
     "href": "articles/test_suite.html",
@@ -13,26 +13,6 @@
     "href": "index.html",
     "title": "About | TAML",
     "keywords": "About TAML - Tab Annotated Markup Language Defining the coolest and simplest markup language delimited ONLY by tabs and carriage returns All TAML documents adhere to these rules STRICTLY: New entries are separated by carriage returns (CR / CRLF) Keys and values are separated by 1+ tab characters (\\t) Subkeys are defined on a line starting with 1+ tab characters (\\t) An array is a key with multiple child values Presence of space characters for delimiting are illegal See the Articles to Get Started, to review the specification, learn more about the available parsers and to review some sample TAML documents."
-  },
-  "articles/interpreters/dotnet.html": {
-    "href": "articles/interpreters/dotnet.html",
-    "title": ".NET | TAML",
-    "keywords": ".NET The .NET parser is available to allow you to read a TAML document and navigate it as a complex object tree. There are TAMLArrays, TAMLValues, and TAMLKeyValuePairs that describe each of the appopriate TAML data structures in your document. Install from NuGet TBD Example Code Parsing a document var doc = TAML.Parser.Parse(new StreamReader(\"SomeFile.taml\")); // Access the 3rd element in the array of objects // under the root element and report it's name doc.rootElement[2].Name; Traversing a document"
-  },
-  "api-dotnet/index.html": {
-    "href": "api-dotnet/index.html",
-    "title": ".NET API Documentation | TAML",
-    "keywords": ".NET API Documentation .NET TAML Parser API Documentation"
-  },
-  "articles/interpreters/javascript.html": {
-    "href": "articles/interpreters/javascript.html",
-    "title": "JavaScript | TAML",
-    "keywords": "JavaScript Not available yet: Issue 2"
-  },
-  "articles/README.html": {
-    "href": "articles/README.html",
-    "title": "TAML | TAML",
-    "keywords": "TAML Specification Version 1.0 TAML attempts to provide a very simple message format that can be used for network communications or hierarchical configuration storage on disk. It is defined by these 5 simple rules: New entries are separated by carriage returns (CR / CRLF) Keys and values are separated by 1+ tab characters (\\t) Subkeys are defined on a line starting with 1+ tab characters (\\t) An array is a key with multiple child values Presence of space characters are illegal A test suite of documents is available at the root of the GitHub repository and more information is provided in the Test Suite documentation topic . Version 1.1 The 1.1 specification for TAML adds support for Processor Directives and comments in the file format. In keeping with the spirit of each line in a file is a distinct record, only single-line comments are supported and directives appear on a single line with a namespaced directive, at least one tab, and then the value assigned. # This is a TAML comment ! TAML.EmptyArraySupported FALSE Additionally, we introducing the ! escape character to help indicate empty values and empty arrays. Key value pairs without an associated value use !\"\" to indicate an empty string. Empty Arrays are indicated with a ![] on the same line as the array key. # This is a key with an empty value key !\"\" # This is an empty array defined by arrayKey arrayKey ![] # This is an array with one empty value myArray !\"\" Available Interpreters dotNET python Mockups of Well-Known Documents as TAML Package.JSON -- Node Package Format Appsettings.JSON -- .NET Configuration Format kubernetes configuration.yml workflow.yml -- GitHub Action specification in YAML"
   },
   "README.html": {
     "href": "README.html",
@@ -48,5 +28,25 @@
     "href": "articles/concrete_examples/yml/README.html",
     "title": "YAML to TAML format samples | TAML",
     "keywords": "YAML to TAML format samples In this folder are proposed migrations of YAML files to the TAML format, illustrating the capability of the document format to deliver simple yet easy to read documents without the extra notation and ceremony of the YAML format. GitHub Actions The GitHub action YAML format delivers a series of steps for each action that should be taken, and each step is defined with a name: <name> pair. name: github pages on: push: branches: - main jobs: deploy: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v2 - name: docfx-action uses: nikeee/docfx-action@v0.1.0 with: args: docs/docfx.json - name: Deploy uses: peaceiris/actions-gh-pages @v3.6.1 with: github_token: ${{ secrets.GITH UB_TOKEN }} publish_dir: ./docs/_site When this is converted to TAML, we can eliminte the redundant name: <name> pair that opens the step object in YAML and make it clearer that an step is defined: name github pages on push branches main jobs deploy runs-on ubuntu-latest steps Checkout uses actions/checko ut@v2 docfx-action uses nikeee/docfx-action@v0.1.0 with args docs/docfx.json Deploy uses peaceiris/actions-gh-pages@v3.6.1 with github_token ${{ secrets.GITHUB_TOKEN }} publish_dir ./docs/_site"
+  },
+  "articles/interpreters/dotnet.html": {
+    "href": "articles/interpreters/dotnet.html",
+    "title": ".NET | TAML",
+    "keywords": ".NET The .NET parser is available to allow you to read a TAML document and navigate it as a complex object tree. There are TAMLArrays, TAMLValues, and TAMLKeyValuePairs that describe each of the appopriate TAML data structures in your document. Install from NuGet TBD Example Code Parsing a document var doc = TAML.Parser.Parse(new StreamReader(\"SomeFile.taml\")); // Access the 3rd element in the array of objects // under the root element and report it's name doc.rootElement[2].Name; Traversing a document"
+  },
+  "api-dotnet/index.html": {
+    "href": "api-dotnet/index.html",
+    "title": ".NET API Documentation | TAML",
+    "keywords": ".NET API Documentation .NET TAML Parser API Documentation"
+  },
+  "articles/interpreters/python.html": {
+    "href": "articles/interpreters/python.html",
+    "title": "python | TAML",
+    "keywords": "python Issue 3"
+  },
+  "articles/interpreters/javascript.html": {
+    "href": "articles/interpreters/javascript.html",
+    "title": "JavaScript | TAML",
+    "keywords": "JavaScript Not available yet: Issue 2"
   }
 }
