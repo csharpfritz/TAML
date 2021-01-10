@@ -25,108 +25,12 @@
       "version": ""
     },
     {
-      "type": "ManagedReference",
-      "source_relative_path": "api-dotnet/TAML.Parser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-dotnet/TAML.Parser.html",
-          "hash": "K8TOexkz+nszNqyHsdMkSg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-dotnet/TAML.TamlArray.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-dotnet/TAML.TamlArray.html",
-          "hash": "psQbDnDZFHnmTP94HHba1A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-dotnet/TAML.TamlDocument.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-dotnet/TAML.TamlDocument.html",
-          "hash": "+fO6WfpaSXk9TYeZEq1Mhg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-dotnet/TAML.TamlExtensionMethods.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-dotnet/TAML.TamlExtensionMethods.html",
-          "hash": "YLn5XAL+w5uQLgfeUOhRcw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-dotnet/TAML.TamlKeyValuePair.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-dotnet/TAML.TamlKeyValuePair.html",
-          "hash": "7pJydNi/qEvMf5PfvR46RA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-dotnet/TAML.TamlValue.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-dotnet/TAML.TamlValue.html",
-          "hash": "QP1gJrsZ2BQltKF5hcAU0w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-dotnet/TAML.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-dotnet/TAML.html",
-          "hash": "H1qVExToXkgqENFAi5F74g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "api-dotnet/index.md",
       "output": {
         ".html": {
           "relative_path": "api-dotnet/index.html",
-          "hash": "/1RhQyiwRbQM29SpGHadkg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "api-dotnet/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-dotnet/toc.html",
-          "hash": "jGZEDjYi2m3KtuiIhUgHsQ=="
+          "hash": "I1UGey2byt6r9oKX7osvWQ=="
         }
       },
       "is_incremental": false,
@@ -268,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "90SdExe/zybJjg1a1ryAFQ=="
+          "hash": "q2BuMmsy/HLvibZ4I/qrug=="
         }
       },
       "is_incremental": false,
@@ -286,23 +190,17 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 10,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 7,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
