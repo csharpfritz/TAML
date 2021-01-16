@@ -15,16 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yaml.Writer.Taml.NET", "Yaml.Writer.Taml.NET\Yaml.Writer.Taml.NET\Yaml.Writer.Taml.NET.csproj", "{8ADC8A76-9520-4805-B8F5-3A5BC6EDF0A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yaml.Writer.Taml", "Yaml.Writer.Taml\Yaml.Writer.Taml\Yaml.Writer.Taml.csproj", "{8ADC8A76-9520-4805-B8F5-3A5BC6EDF0A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Yaml.Writer.Taml.NET", "Yaml.Writer.Taml.NET\Test.Yaml.Writer.Taml.NET\Test.Yaml.Writer.Taml.NET.csproj", "{392DCAA9-1C16-44CC-880C-F9BF5DE45FFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Yaml.Writer.Taml", "Yaml.Writer.Taml\Test.Yaml.Writer.Taml\Test.Yaml.Writer.Taml.csproj", "{392DCAA9-1C16-44CC-880C-F9BF5DE45FFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yaml.Writer.Cli", "Yaml.Writer.Taml.NET\Yaml.Writer.Cli\Yaml.Writer.Cli.csproj", "{BB383A98-D380-422B-9347-8FCC5F58357F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yaml.Writer.Cli", "Yaml.Writer.Taml\Yaml.Writer.Cli\Yaml.Writer.Cli.csproj", "{BB383A98-D380-422B-9347-8FCC5F58357F}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taml.Configuration", "Taml.Configuration\Taml.Configuration\Taml.Configuration.csproj", "{069403C6-DE0A-4043-8D92-88DADE3DB3E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Taml.Configuration", "Taml.Configuration\Test.Taml.Configuration\Test.Taml.Configuration.csproj", "{2CF41FAB-4607-4772-8544-8D2EF8FF9DB8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Taml.Configuration", "Taml.Configuration", "{D8BF9D98-AE40-4736-B471-1A0CD71184C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

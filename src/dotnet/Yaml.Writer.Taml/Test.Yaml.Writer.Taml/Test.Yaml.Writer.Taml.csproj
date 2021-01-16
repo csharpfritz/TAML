@@ -22,7 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Taml\Taml\Taml.csproj" />
     <ProjectReference Include="..\..\Taml\Test.Taml\Test.Taml.csproj" />
-    <ProjectReference Include="..\Yaml.Writer.Taml.NET\Yaml.Writer.Taml.NET.csproj" />
+    <ProjectReference Include="..\Yaml.Writer.Taml\Yaml.Writer.Taml.csproj" />
   </ItemGroup>
 
   <ItemGroup>
