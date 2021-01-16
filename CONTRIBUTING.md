@@ -18,7 +18,7 @@ The following is a set of guidelines for contributing to the project.  These are
 
 ## Code of Conduct
 
-We have adopted a code of conduct from the Contributor Covenant.  Contributors to this project are expected to adhere to this code.  Please report unwanted behavior to [jeff@jeffreyfritz.com](mailto:jeff@jeffreyfritz.com)
+We have adopted a code of conduct from the [Contributor Covenant](CODE-OF-CONDUCT.md).  Contributors to this project are expected to adhere to this code.  Please report unwanted behavior to [jeff@jeffreyfritz.com](mailto:jeff@jeffreyfritz.com)
 
 ## What should I know before I get started?
 
@@ -34,9 +34,9 @@ This project is designed to be built and run primarily with Visual Studio 2019. 
 /docs                                  -- User Documentation
 /src                                   -- TAML Parsers
   /dotnet
-    /Taml.NET
-      /Taml.NET                        -- DotNet Parser
-      /Test.Taml.NET                   -- Unit tests
+    /Taml
+      /Taml							   -- DotNet Parser
+      /Test.Taml					   -- Unit tests
   /python
     /src
       /pytaml                          -- Python Parser
@@ -82,6 +82,6 @@ We are always looking for help on this project.  There are several ways that you
 
 We are always looking for help to add content to the `/docs` section of the repository with proper links back through to the main `/README.md`.
 
-### Recources
+### Resources
 
 [cmjchrisjones Blog: Contributing To Someone else's git repository](https://cmjchrisjones.dev/posts/contributing-to-someone-elses-git-repository/)
