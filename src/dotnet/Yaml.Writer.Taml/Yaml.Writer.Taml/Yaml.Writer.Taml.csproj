@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.1</Version>
+    <Authors>Jeffrey T. Fritz and Friends</Authors>
+    <Description>Yaml writer for TAML</Description>
+    <Copyright>Copyright Jeffery T. Fritz</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/csharpfritz/TAML</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/cgleadall/TAML</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <RootNamespace>TAML.Writer.Yaml</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Taml\Taml\Taml.csproj" />
+  </ItemGroup>
+
+</Project>
