@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Taml.NET\Taml.NET\Taml.NET.csproj" />
+    <ProjectReference Include="..\..\Taml\Taml\Taml.csproj" />
   </ItemGroup>
 
 </Project>

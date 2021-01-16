@@ -1,9 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 using TAML;
 using TAML.Writer.Yaml;
-using Test.Taml.NET;
+using Test.Taml;
 using Xunit;
 
 namespace Test.Yaml.Writer.Taml.NET.GivenComplexChildDocument

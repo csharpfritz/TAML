@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Taml.NET\Taml.NET\Taml.NET.csproj" />
-    <ProjectReference Include="..\..\Taml.NET\Test.Taml.NET\Test.Taml.NET.csproj" />
+    <ProjectReference Include="..\..\Taml\Taml\Taml.csproj" />
+    <ProjectReference Include="..\..\Taml\Test.Taml\Test.Taml.csproj" />
     <ProjectReference Include="..\Yaml.Writer.Taml.NET\Yaml.Writer.Taml.NET.csproj" />
   </ItemGroup>
 

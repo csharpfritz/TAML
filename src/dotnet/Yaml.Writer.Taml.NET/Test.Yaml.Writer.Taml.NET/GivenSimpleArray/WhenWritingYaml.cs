@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
-using Test.Taml.NET;
+using Test.Taml;
 using TAML;
 using TAML.Writer.Yaml;
 
